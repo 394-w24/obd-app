@@ -1,0 +1,24 @@
+{
+    "P0100": "Mass or Volume Air Flow Circuit Malfunction",
+    "P0128": "Coolant Thermostat (Coolant Temperature Below Thermostat Regulating Temperature)",
+    "P0300": "Random/Multiple Cylinder Misfire Detected",
+    "P0420": "Catalyst System Efficiency Below Threshold (Bank 1)",
+    "P0505": "Idle Control System Malfunction",
+    "P0562": "System Voltage Low",
+    "P0606": "PCM Processor Fault",
+    "P0700": "Transmission Control System Malfunction",
+    "P1128": "Closed Loop Fueling Not Achieved Bank 1",
+    "P1300": "Ignition Timing Adjustment Circuit Malfunction",
+    "P1443": "Evaporative Emission Control System Control Valve",
+    "P1507": "Idle Control System Malfunction (Fail Safe)",
+    "P1710": "Transmission System Problems Detected",
+    "P2006": "Intake Manifold Runner Control Stuck Closed (Bank 1)",
+    "P2096": "Post Catalyst Fuel Trim System Too Lean Bank 1",
+    "P2181": "Cooling System Performance",
+    "P2279": "Intake Air System Leak",
+    "P2402": "EVAP Leak Detection Pump Control Circuit High",
+    "P2626": "O2 Sensor Pumping Current Trim Circuit/Open Bank 1 Sensor 1",
+    "P3400": "Cylinder Deactivation System Bank 1",
+    "P4200": "Catalyst Efficiency Low-Bank 1"
+  }
+  

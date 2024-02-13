@@ -1,0 +1,42 @@
+.logo {
+    width: 70px; 
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block
+  }
+  
+  .title {
+    font-size: 70px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  
+  .link{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
+
+  .form-descriptor{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 25px;
+    text-align: center;
+  }
+
+  .inner{
+    margin-right: auto;
+    margin-left: auto;
+  }
+
