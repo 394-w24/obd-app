@@ -1,0 +1,44 @@
+{
+    "request" : {
+        "vin":"1GNALDEK9FZ108495",
+        "mileage":51000,
+        "dtc":"p0420"
+      }, 
+    "response" : {
+        "data":[{
+          "desc":"Replace Catalytic Converter(s) with new OE Catalytic Converter(s)",
+          "urgency":2,
+          "urgency_desc":"Repair immediately if drivability issues are present. Threat to essential system components if not repaired as soon as possible.",
+          "repair":{
+            "difficulty":3,
+            "hours":2.3,
+            "labor_rate_per_hour":106.38,
+            "part_cost":1967.01,
+            "labor_cost":244.674,
+            "misc_cost":25,
+            "total_cost":2236.684
+          },
+          "parts":[{
+            "desc":"Catalytic Converter",
+            "manufacturer":"",
+            "price":683.67,
+            "qty":"1"
+          },{
+            "desc":"Catalytic Converter",
+            "manufacturer":"",
+            "price":1283.34,
+            "qty":"1"
+          }],
+          "tsb":[{
+            "id":118676,
+            "manufacturer_number":"07-00-89-037K",
+            "desc":"Warranty Administration - Courtesy Transportation and Roadside Assistance Programs",
+            "categories":["Tools & Hardware"],
+            "file_name":"4824780",
+            "file_url":"http://downloads.innova.com/tsb-files/118000/4824780.pdf",
+            "issue_date":"2017-06-23T00:00:00",
+            "updated_date":"2017-10-10T00:00:00"
+          }]
+        }]
+      }
+}
