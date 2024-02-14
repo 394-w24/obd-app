@@ -2,17 +2,20 @@ import React from "react";
 import { useState } from "react";
 import icon from "../carRepair.png"
 import "./Homepage.css"
+import data from "../../data/data.json"
 import CodeInfoPage from "./CodeInfoPage";
 
 const HomePage = ()  => {
-    const [code, setCode] = useState({});
-
-    const handleInputChange = (event) => {
-        setCode(event.target.value.toUpperCase());
-      };
+    const [code, setCode] = useState(null);
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        const newCode = e.target.code.value 
+        if (data[newCode]) {
+            setCode(-1)
+        }else{
+            setCode(e.target.code.value)
+        }
     }
     return (
         <div className="container">
@@ -29,12 +32,30 @@ const HomePage = ()  => {
                         <input 
                             type="text"
                             class="form-control" 
-                            onChange={handleInputChange} 
+                            name="code" 
                             placeholder="Ex. P0100"/>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
              </div>
+            
+            <div>
+                {code ? 
+                    <div>
+                        {code == -1 ? 
+                        <div>
+                            <h1>The code was not found :/</h1>
+                        </div>
+                        : 
+                        <div>
+                            <h1>More information for: {code}</h1>
+                        </div>
+                        }
+                    </div>
+                    :
+                    <div></div>
+                }
+            </div>
         </div>
 
     );
