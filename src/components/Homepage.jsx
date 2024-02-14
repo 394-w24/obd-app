@@ -6,6 +6,7 @@ import data from "../../data/data.json"
 import "./response.css"
 
 
+
 const HomePage = () => {
     const [code, setCode] = useState(null);
 
@@ -27,7 +28,7 @@ const HomePage = () => {
                 </a>
             </div>
             <div className="inner">
-                <p className="form-descriptor">To learn more about your car's required maintenance, input the repair code given by your OBD reader. </p>
+                <p className="form-descriptor">To learn more about your car's required maintenance, input some information about you car and its DTC code. </p>
                 <form onSubmit={handleSubmit}>
                     <div class="form-group">
                         <input
@@ -95,8 +96,7 @@ const HomePage = () => {
                     </div>
 
             :
-            <div>
-                </div>
+            <div></div>
 
 }
 </div>
