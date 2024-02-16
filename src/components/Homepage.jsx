@@ -28,36 +28,25 @@ const HomePage = () => {
                     <span className="title">RepairMate</span>
                 </a>
             </div>
-            <div>
-                <p className="form-descriptor">To learn more about your car's required maintenance, input some information about you car and its DTC code. </p>
-                <form onSubmit={handleSubmit}>
-                    <div class="form-group">
-                        <h4 style={{marginBottom: "0rem"}}>VIN Number:</h4>
-                        <a href="https://www.txdmv.gov/motorists/how-to-find-the-vin">
-                            <small>What is a VIN number?</small>
-                        </a>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="vin"
-                            placeholder="Ex. 4Y1SL65848Z411439" />
-                            <hr></hr>
-                        <h4 style={{marginBottom: "10px"}}>Car Mileage:</h4>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="miles"
-                            placeholder="Ex. 45689" />
-                         <hr></hr>
-                        <h4 style={{marginBottom: "10px"}}>DTC Code:</h4>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="code"
-                            placeholder="Ex. P0100" />
+            <div className="form-container">
+                <p className="form-descriptor">To learn more about your car's required maintenance, input some information about your car and its DTC code.</p>
+                <form className="form" onSubmit={handleSubmit}>
+                    <div className="form-group">
+                        <h4 className="input-label" style={{marginBottom: "0rem"}}>VIN Number:</h4>
+                        <a href="https://www.txdmv.gov/motorists/how-to-find-the-vin" className="small-link" target="_blank" rel="noopener noreferrer">What is a VIN number?</a>
+                        <input type="text" className="form-control" name="vin" placeholder="Ex. 4Y1SL65848Z411439" />
                     </div>
-                    <br></br>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <hr className="divider"></hr>
+                    <div className="form-group">
+                        <h4 className="input-label">Car Mileage:</h4>
+                        <input type="text" className="form-control" name="miles" placeholder="Ex. 45689" />
+                    </div>
+                    <hr className="divider"></hr>
+                    <div className="form-group">
+                        <h4 className="input-label">DTC Code:</h4>
+                        <input type="text" className="form-control" name="code" placeholder="Ex. P0100" />
+                    </div>
+                    <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
             </div>
             <br></br>
@@ -108,7 +97,7 @@ const HomePage = () => {
                                         </li>
                                         <li><b>TSB:</b>
                                             <ul>
-                                                <li>Instructions: <a href="http://downloads.innova.com/tsb-files/118000/4824780.pdf">Download TSB Instructions</a></li>
+                                                <li>Instructions: <a href="http://downloads.innova.com/tsb-files/118000/4824780.pdf" target="_blank" rel="noopener noreferrer">Download TSB Instructions</a></li>
                                             </ul>
                                         </li>
                                     </ul>
