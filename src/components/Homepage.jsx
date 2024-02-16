@@ -32,21 +32,24 @@ const HomePage = () => {
                 <p className="form-descriptor">To learn more about your car's required maintenance, input some information about you car and its DTC code. </p>
                 <form onSubmit={handleSubmit}>
                     <div class="form-group">
-                        <h4>Vin Number:</h4>
+                        <h4 style={{marginBottom: "0rem"}}>VIN Number:</h4>
+                        <a href="https://www.txdmv.gov/motorists/how-to-find-the-vin">
+                            <small>What is a VIN number?</small>
+                        </a>
                         <input
                             type="text"
                             class="form-control"
                             name="vin"
                             placeholder="Ex. 4Y1SL65848Z411439" />
                             <hr></hr>
-                        <h4>Car Mileage:</h4>
+                        <h4 style={{marginBottom: "10px"}}>Car Mileage:</h4>
                         <input
                             type="text"
                             class="form-control"
                             name="miles"
                             placeholder="Ex. 45689" />
                          <hr></hr>
-                        <h4>DTC Code:</h4>
+                        <h4 style={{marginBottom: "10px"}}>DTC Code:</h4>
                         <input
                             type="text"
                             class="form-control"
