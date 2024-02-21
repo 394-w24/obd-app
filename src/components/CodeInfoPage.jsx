@@ -1,12 +1,26 @@
-import React from "react";
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+import Response from './response';
+import icon from "../carRepair.png";
 
+const CodeInfoPage = () => {
+  const location = useLocation();
+  const formData = location.state || {};
 
-const CodeInfoPage = (code)  => {
-    return (
-      <div>
-        Code Information should go here 
+  return (
+    <div className="container">
+      <div className="inner">
+        <a href="/" className="link">
+          <img src={icon} alt="Repair Icon" className="logo" />
+        </a>
       </div>
-    );
-  }
-  
-  export default CodeInfoPage;
+      <h1 className="title">Code Information</h1>
+      {formData.vin && <p>VIN: {formData.vin}</p>}
+      {formData.miles && <p>Mileage: {formData.miles}</p>}
+      {formData.code && <p>Code: {formData.code}</p>}
+      <Response />
+    </div>
+  );
+};
+
+export default CodeInfoPage;

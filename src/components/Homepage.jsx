@@ -4,22 +4,24 @@ import icon from "../carRepair.png"
 import "./Homepage.css"
 import data from "../../data/data.json"
 import "./response.css"
+import { useNavigate } from "react-router-dom";
 
 
 
 const HomePage = () => {
+    const navigate = useNavigate();
     const [code, setCode] = useState(null);
-
+  
     const handleSubmit = (e) => {
-        e.preventDefault()
-        setCode(e.target.code.value)
-        // const newCode = e.target.code.value
-        // if (data[newCode]) {
-        //     setCode(-1)
-        // } else {
-        //     setCode(e.target.code.value)
-        // }
-    }
+      e.preventDefault();
+      const formValues = {
+        vin: e.target.vin.value,
+        miles: e.target.miles.value,
+        code: e.target.code.value
+      };
+      // Instead of setting state, navigate to the CodeInfoPage
+      navigate('/code', { state: formValues });
+    };
     return (
         <div className="container">
             <div className="inner">
