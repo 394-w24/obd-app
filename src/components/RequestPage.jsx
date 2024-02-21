@@ -4,23 +4,26 @@ import icon from ".././icons/carRepair.png"
 import "./RequestPage.css"
 import { Link, Navigate } from "react-router-dom";
 import "./response.css"
+import "./response.css"
+import { useNavigate } from "react-router-dom";
 
 
 
 
 const RequestPage = () => {
+    const navigate = useNavigate();
     const [code, setCode] = useState(null);
-
+  
     const handleSubmit = (e) => {
-        e.preventDefault()
-        setCode(e.target.code.value)
-        // const newCode = e.target.code.value
-        // if (data[newCode]) {
-        //     setCode(-1)
-        // } else {
-        //     setCode(e.target.code.value)
-        // }
-    }
+      e.preventDefault();
+      const formValues = {
+        vin: e.target.vin.value,
+        miles: e.target.miles.value,
+        code: e.target.code.value
+      };
+      // Instead of setting state, navigate to the CodeInfoPage
+      navigate('/codeinfo', { state: formValues });
+    };
     return (
         <div className="container">
             <div className="inner">
@@ -49,11 +52,8 @@ const RequestPage = () => {
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
-                {code && 
-                    <Navigate to="/codeinfo" replace={true} />}
             </div>
-            <br></br>
-        </div> 
+        </div>
     );
 }
 
