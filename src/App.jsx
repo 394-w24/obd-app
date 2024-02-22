@@ -6,12 +6,14 @@ import RequestPage from './components/RequestPage';
 import CodeInfoPage from './components/CodeInfoPage';
 import ProfilePage from './components/ProfilePage';
 import NavPage from './components/NavPage';
+import LoginPage from "./components/LoginPage"
 
 const App = ()  => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<NavPage />}/>
+        <Route path="/" element={<LoginPage />}/>
+        <Route path="/navpage" element={<NavPage />}/>
         <Route path="/request" element={<RequestPage/>}/>
         <Route path="/codeinfo" element={<CodeInfoPage /> } />
         <Route path="/profile" element={<ProfilePage /> } />

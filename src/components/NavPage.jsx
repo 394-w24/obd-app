@@ -10,7 +10,6 @@ const NavPage = () => {
   return (
     <div className="container">
       <h3>Welcome, user!</h3>
-      <LoginPage />
       <div className='nav-list'>
           <Link to="/request">            
             <img src={repair} alt="repair"/>
