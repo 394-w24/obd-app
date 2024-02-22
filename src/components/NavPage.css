@@ -5,14 +5,28 @@
   padding: 20px;
 }
 
+.nav-heading {
+  text-align: center;
+  padding-top: 5px;
+}
+
 .nav-list {
   display: grid;
+  padding: 20px;
   grid-template-columns: repeat(2, auto);
-  grid-column-gap: 5px;
+  grid-column-gap: 2px;
   max-width: auto;
 }
 
 .nav-list img {
-  max-width: 100%; 
+  margin: auto;
+  max-width: 25%; 
   height: auto;
+  transform: translateX(150%);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
 }

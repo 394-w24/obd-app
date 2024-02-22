@@ -32,7 +32,7 @@ const firebaseSignOut = () => signOut(getAuth(app));
 export { firebaseSignOut as signOut };
 
 export const useAuthState = () => {
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(null);
 
   useEffect(() => (
       onAuthStateChanged(getAuth(app), setUser)
@@ -40,5 +40,10 @@ export const useAuthState = () => {
 
   return [user];
 };
+
+export const isUser = () => {
+  const user = firebase.auth().currentUser 
+  return user ? true : false
+}
 
 export default database;
