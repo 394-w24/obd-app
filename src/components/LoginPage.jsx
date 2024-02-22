@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { signInWithGoogle, signOut } from '../utilities/firebase';
-import { Button, TextField, Checkbox, FormControlLabel, Link, Paper, Box, Typography, Divider } from '@mui/material';
-import GoogleIcon from '@mui/icons-material/Google';
 import { useNavigate } from 'react-router-dom';
+import './LoginPage.css'; // Include the CSS for the new design
+import LoginLogo from ".././icons/LoginLogo.png"
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -12,18 +12,14 @@ const LoginPage = () => {
   const loginWithGoogle = async () => {
     try {
       await signInWithGoogle();
-      // Navigate to the NavPage after successful login
-      navigate('/navpage'); // Replace '/navpage' with the actual path you want to navigate to
+      navigate('/navpage'); // Replace with your desired path
     } catch (error) {
-      // Handle errors here, such as displaying a notification to the user
       console.error(error);
     }
   };
-  
 
   const loginWithEmail = () => {
-    // Here you should call your sign-in method for email/password authentication
-    // For example: signInWithEmail(email, password);
+    // signInWithEmail logic here
   };
 
   const logout = () => {
@@ -31,62 +27,43 @@ const LoginPage = () => {
   };
 
   return (
-    <Paper elevation={3} sx={{ padding: 3, maxWidth: 400, margin: 'auto', marginTop: 5 }}>
-      <Box display="flex" flexDirection="column" alignItems="center">
-        <Button 
-          variant="contained" 
-          startIcon={<GoogleIcon />} 
-          onClick={loginWithGoogle}
-          sx={{ marginBottom: 2 }}
-        >
-          Log In with Google
-        </Button>
-        <Typography variant="subtitle1">Or</Typography>
-        <TextField 
-          label="Email" 
-          variant="outlined" 
-          value={email} 
-          onChange={(e) => setEmail(e.target.value)} 
-          fullWidth 
-          margin="normal"
-        />
-        <TextField 
-          label="Password" 
-          type="password" 
-          variant="outlined" 
-          value={password} 
-          onChange={(e) => setPassword(e.target.value)} 
-          fullWidth 
-          margin="normal"
-        />
-        <Box display="flex" justifyContent="space-between" alignItems="center" width="100%" marginY={2}>
-          <FormControlLabel
-            control={<Checkbox name="remember" color="primary" />}
-            label="Remember for 30 days"
+    <div className="screen-1">
+      <img src={LoginLogo} alt="LoginLogo"/>
+      <div className="email">
+        <label htmlFor="email">Email Address</label>
+        <div className="sec-2">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input
+            type="email"
+            name="email"
+            placeholder="Username@gmail.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <Link href="#" variant="body2">
-            Forgot password?
-          </Link>
-        </Box>
-        <Button 
-          variant="contained" 
-          onClick={loginWithEmail} 
-          fullWidth 
-          sx={{ marginBottom: 2 }}
-        >
-          Log In
-        </Button>
-        <Divider sx={{ width: '100%', my: 2 }} />
-        <Button 
-          variant="text" 
-          fullWidth 
-          onClick={logout}
-        >
-          Don't have an account? Sign Up
-        </Button>
-      </Box>
-    </Paper>
+        </div>
+      </div>
+      <div className="password">
+        <label htmlFor="password">Password</label>
+        <div className="sec-2">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input
+            className="pas"
+            type="password"
+            name="password"
+            placeholder="············"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <ion-icon className="show-hide" name="eye-outline"></ion-icon>
+        </div>
+      </div>
+      <button className="login" onClick={loginWithEmail}>Login</button>
+      <button className="login" onClick={loginWithGoogle}>Log In with Google</button>
+      <div className="footer">
+        <span>Don't have an account? Sign Up</span>
+      </div>
+    </div>
   );
-}
+};
 
 export default LoginPage;
