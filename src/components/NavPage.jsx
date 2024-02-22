@@ -11,7 +11,6 @@ import { useAuthState } from '.././utilities/firebase';
 const NavPage = () => {
 
   const username = useAuthState()[0]?.displayName
-  console.log(username)
 
   return (
     <div className="container">
