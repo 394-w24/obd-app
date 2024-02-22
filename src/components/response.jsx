@@ -1,19 +1,14 @@
 // Response.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import icon from ".././icons/carRepair.png";
 
 const Response = () => {
   return (
     <div className="container">
-        <div className="inner">
-            {/* <a href="/" className="link">
-                <img src={icon} alt="Repair Icon" className="logo" />
-                <span className="title">RepairMate</span>
-            </a> */}
-        </div>
         <div>
             <h3 style={{textAlign: "center"}}>
-                <b><u>Repair Description</u></b>
+                <b>Repair Description</b>
             </h3>
             <ul>
                 <li>Replace Catalytic Converter(s) with new OE Catalytic Converter(s)</li>
@@ -54,6 +49,9 @@ const Response = () => {
                 </li>
             </ul>
         </div>
+        <Link to="/mechanics">
+                <button className="btn btn-primary">Find Mechanics</button>
+        </Link>
     </div> 
   );
 };

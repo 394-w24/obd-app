@@ -1,22 +1,34 @@
 import React, { useEffect, useState } from 'react';
+import MechanicCard from './MechanicCard';
+import { calculateBbox, haversineDistance } from '../utilities/coordinates';
+import { SpinningCircles } from 'react-loading-icons'
+import ThreeDots from 'react-loading-icons/dist/esm/components/three-dots';
+
 
 const LocalMechanics = () => {
   const [mechanics, setMechanics] = useState([]);
-  const bbox = '51.5145,-0.1423,51.5161,-0.1393'; 
+  const [location, setLocation] = useState({
+    lat: 42.0451, 
+    lon: 87.6877
+  });
 
+ 
+  //trying to get user's current location, just using evanston coords for now 
+  // function error(){
+  //   console.log("Could not find location")
+  // }
+  // //navigator.geolocation.getCurrentPosition(setLocation, error)
+
+  // setLocation({lat:42.0451, lon:87.6877})
+ 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        const bbox = calculateBbox(location.lat, location.lon, 2).join(",")
         const overpassQuery = `
-          [out:json];
-          (
-            node["shop"="car_repair"](${bbox}); // Search for nodes with shop=car_repair tag
-            way["shop"="car_repair"](${bbox});  // Search for ways with shop=car_repair tag
-            node["a]
-          );
-          out body;
-          >;
-          out skel qt;`;
+        [out:json];
+        nwr["shop"="car_repair"](${bbox});
+        out center;`;
 
         const response = await fetch('https://overpass-api.de/api/interpreter', {
           method: 'POST',
@@ -37,23 +49,22 @@ const LocalMechanics = () => {
           lon: element.lon,
           tags: element.tags
         }));
-        setMechanics(fetchedMechanics);
+        setMechanics(fetchedMechanics.filter(mechanic => mechanic.tags.name).sort((a, b) => haversineDistance(location.lat, location.lon, b.lat, b.lon) -haversineDistance(location.lat, location.lon, a.lat, a.lon)).slice(0, 10));
       } catch (error) {
         console.error('Error fetching mechanics:', error);
       }
     };
-
+  
     fetchData();
-  }, []); // Empty dependency array ensures useEffect runs only once
+  }, []); 
+
 
   return (
     <div className='container'>
-      <h1>Mechanics</h1>
+      <h1>Mechanics Near You</h1>
       <ul>
         {mechanics.map(mechanic => (
-          <li key={mechanic.id}>
-            Mechanic ID: {mechanic.id}, Latitude: {mechanic.lat}, Longitude: {mechanic.lon}
-          </li>
+          <MechanicCard id={mechanic.id} tags={mechanic.tags}/>
         ))}
       </ul>
     </div>

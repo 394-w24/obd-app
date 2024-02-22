@@ -8,7 +8,7 @@ import ProfilePage from './components/ProfilePage';
 import NavPage from './components/NavPage';
 import LoginPage from "./components/LoginPage"
 import LocalMechanics from './components/LocalMechanics';
-import PrivateRoutes from './utilities/PrivateRoutes';
+import MechanicPage from './components/MechanicPage';
 import { useAuthState } from './utilities/firebase';
 
 const App = ()  => {
@@ -23,6 +23,7 @@ const App = ()  => {
           <Route path="/codeinfo" element={<CodeInfoPage /> } />
           <Route path="/profile" element={<ProfilePage /> } />
           <Route path="/mechanics" element={<LocalMechanics/>}/>
+          {/* <Route path="/mechanic/:mechanicId" element={<MechanicPage /> } /> */}
       </Routes>
     </BrowserRouter>
   );
