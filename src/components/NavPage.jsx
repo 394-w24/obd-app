@@ -24,10 +24,10 @@ const NavPage = () => {
             <img src={profile} alt="profile"/>
             <h4 className='nav-heading'>Profile</h4>
           </Link>
-          <div className= "nav-link">
+          {/* <div className= "nav-link">
             <img src={settings} alt="setting"/>
             <h4 className='nav-heading'>Settings</h4>
-          </div>
+          </div> */}
           <Link className= "nav-link" to="/mechanics">
             <img src={contact} alt="contact"/>
             <h4 className='nav-heading'>Contact <br/>Mechanics</h4>
