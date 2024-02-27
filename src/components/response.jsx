@@ -50,7 +50,10 @@ const Response = () => {
             </ul>
         </div>
         <Link to="/mechanics">
-                <button className="btn btn-primary">Find Mechanics</button>
+                <button className="btn btn-primary custom-button">Find Mechanics</button>
+        </Link>
+        <Link to="/repairguide">
+                <button className="btn btn-primary custom-button">Repair Guide</button>
         </Link>
     </div> 
   );
