@@ -27,16 +27,19 @@ const RepairGuide = () => {
                             />
                         ))}
                     </div>
-                    <a href={dtcData['youtube_link']} target="_blank" rel="noopener noreferrer">
-                        <div style={{ display: 'flex', alignItems: 'center', margin: '10px 0' }}>
-                            <img 
-                                src={`http://img.youtube.com/vi/${getYoutubeVideoID(dtcData['youtube_link'])}/0.jpg`}
-                                alt="YouTube Thumbnail"
-                                style={{ maxWidth: '120px', marginRight: '10px' }}
-                            />
-                            <span>Watch on YouTube</span>
+                    {dtcData['youtube_link'] && (
+                        <div className="video-responsive">
+                            <iframe
+                                title={`YouTube Video ${dtcCode}`}
+                                src={`https://www.youtube.com/embed/${getYoutubeVideoID(dtcData['youtube_link'])}`}
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
                         </div>
-                    </a>
+                    )}
+
+
                 </div>
             ))}
         </div>
