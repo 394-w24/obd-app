@@ -1,11 +1,15 @@
 import React from 'react';
 import guideData from '../data/repair.json'; 
+import icon from ".././icons/carRepair.png";
 
 const RepairGuide = () => {
     const dtcEntries = guideData['Repair Guide']['DTC'];
 
     return (
         <div>
+            <a href="/navpage" className="link">
+                <img src={icon} alt="Repair Icon" className="logo" />
+            </a>
             <h1>Repair Guide</h1>
             {Object.entries(dtcEntries).map(([dtcCode, dtcData]) => (
                 <div key={dtcCode}>

@@ -3,7 +3,7 @@ import MechanicCard from './MechanicCard';
 import { calculateBbox, haversineDistance } from '../utilities/coordinates';
 import { SpinningCircles } from 'react-loading-icons'
 import ThreeDots from 'react-loading-icons/dist/esm/components/three-dots';
-
+import icon from ".././icons/carRepair.png";
 
 const LocalMechanics = () => {
   const [mechanics, setMechanics] = useState([]);
@@ -61,6 +61,9 @@ const LocalMechanics = () => {
 
   return (
     <div className='container'>
+      <a href="/navpage" className="link">
+        <img src={icon} alt="Repair Icon" className="logo" />
+      </a>
       <h1>Mechanics Near You</h1>
       <ul>
         {mechanics.map(mechanic => (
