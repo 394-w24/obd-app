@@ -16,22 +16,18 @@ const NavPage = () => {
     <div className="container">
       <h3>Welcome, {username}!</h3>
       <div className='nav-list'>
-          <Link className= "nav-link" to="/request">            
-            <img src={repair} alt="repair"/>
-            <h4 className='nav-heading'>Diagnose<br/>Repair</h4>
-          </Link>
-          <Link className= "nav-link" to="/profile">
-            <img src={profile} alt="profile"/>
-            <h4 className='nav-heading'>Profile</h4>
-          </Link>
-          {/* <div className= "nav-link">
-            <img src={settings} alt="setting"/>
-            <h4 className='nav-heading'>Settings</h4>
-          </div> */}
-          <Link className= "nav-link" to="/mechanics">
-            <img src={contact} alt="contact"/>
-            <h4 className='nav-heading'>Contact <br/>Mechanics</h4>
-          </Link>
+        <div className="card" style={{ width: '18rem' }}>
+          <div className="card-body">
+              <Link className="card-title" style= {{textAlign:"center"}} to="/request">            
+                <h3 className="card-title">Diagnostics</h3>
+              </Link>
+          </div>
+        </div>
+        <div className="card" style={{ width: '18rem' }}>
+          <div className="card-body">
+            <h3 className="card-title">Maintenance</h3>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -29,7 +29,7 @@ const LoginPage = () => {
   return (
     <div className="screen-1">
       <img src={LoginLogo} alt="LoginLogo"/>
-      <div className="email">
+      {/* <div className="email">
         <label htmlFor="email">Email Address</label>
         <div className="sec-2">
           <ion-icon name="mail-outline"></ion-icon>
@@ -57,7 +57,7 @@ const LoginPage = () => {
           <ion-icon className="show-hide" name="eye-outline"></ion-icon>
         </div>
       </div>
-      <button className="login" onClick={loginWithEmail}>Login</button>
+      <button className="login" onClick={loginWithEmail}>Login</button> */}
       <button className="login" onClick={loginWithGoogle}>Log In with Google</button>
       <div className="footer">
         <span>Don't have an account? Sign Up</span>
