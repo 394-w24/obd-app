@@ -26,12 +26,20 @@ const Response = () => {
                         <li>Total Cost: $2236.684</li>
                     </ul>
                 </li>
-                
+              
              
             </ul>
         </div>
+
         <Link to="/options">
                 <button className="circle-btn">Let's Fix It!</button>
+
+        <Link to="/mechanics">
+                <button className="btn btn-primary custom-button">Find Mechanics</button>
+        </Link>
+        <Link to="/repairguide">
+                <button className="btn btn-primary custom-button">Repair Guide</button>
+
         </Link>
     </div> 
   );

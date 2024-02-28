@@ -5,28 +5,30 @@
   padding: 20px;
 }
 
-.nav-heading {
-  text-align: center;
-  padding-top: 5px;
+nav-list {
+    display: grid;
+    padding: 100px;
+    grid-template-columns: repeat(1, auto);
+    max-width: auto;
+}
+.card-title {
+  color: rgb(121,117,180) !important; 
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center; 
+} 
+
+.card-body{
+  justify-content: center;
 }
 
-.nav-list {
-  display: grid;
-  padding: 20px;
-  grid-template-columns: repeat(2, auto);
-  grid-column-gap: 2px;
-  max-width: auto;
+.card {
+  margin: 12px;
+  transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+  justify-content: center;
+  background-color: hsl(231deg, 62%, 94%);
 }
 
-.nav-list img {
-  margin: auto;
-  max-width: 25%; 
-  height: auto;
-  transform: translateX(150%);
-}
-
-.nav-link {
-  text-decoration: none;
-  color: inherit;
-  padding: 10px;
+.card:hover {
+  box-shadow: 0 10px 20px 0 rgb(121,117,180) !important; /* Shorter Shadow effect */
 }

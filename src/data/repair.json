@@ -1,0 +1,16 @@
+{
+    "Repair Guide": {
+        "DTC": {
+            "P0150": {
+                "DTC Explanation": "O2 Sensor Circuit Malfunction",
+                "Part": "Bank 2 Sensor 1",
+                "Possible Causes": "Broken sensor element. Sensor disconnected. Shorted wiring. Catastrophic failure of sensor due to thermal shock.",
+                "image_url": [
+                    "https://lh7-us.googleusercontent.com/sheets/APBGjhY3h2vZOH_YrVhSGjAmReu5edBNDaCu5AqCmFZtLYkdUtow73zzLIphpRykdkrTdiBZP7TVV3x5G-yHK09QLo1LmyAWHUdsJhp2m7uZAWo9-xtm02Y0x2_Ob-kFa1guDWM6k2a4-VlDsGKtt1tO4dj4s2goWaNwE9rZP5XGO5QbHWMHDcHNuURzvVJaj_QuYGIqxDYJOrNU2DXuhdPzPJav20u22XRI6ufVsDEHVzpfbSys1kKnM4DB7n5cp3xH8sbGWhJEu95wB2Qp0qwa7Nq2x6l_KuJWP5RWuQZM11PMCioIgM0PZvsQGe-rhWRFxfyCYM3uDks-PlPSrxKqEknPKyo0EcIaQljWHy5Jdr-4YDYUhhBHRjPj1sQA_y_XNk-MJ-o1epHDrZg_XU_5n_IPhUpXWiJhF_hwlqarzgwTyxDfA_-T1ZQd9BLWPcxn3nkDFNaV_Sh1_jFkx3X-49N76vBc1zSvRf3fajeA-eMkaxRzuZN-D9cAtbDohkDRFGAgQlXnr7RLYp1f9ThwJrYvylHrvO7m0RkvnzjhALJifsENYeBJQXsBfMMwCnNaXOYyB-mB-0eMXIha931PZmN9Z44sHfUOTGwG7XoZ_9Z0V8ioDuGuA-b07n1hJuzyDX1S6K72DhfA-5FbHTNa3dLwJLuVeHpgKkP_BGRojnaP-SZR-S98XASYhAohroIt4XAsL4quw__Z9NDhqPZ7x3zxiQpRZaaSf5JZLcs6-QhpAlOL2k97qtvxYK1T2S-XdSJZ58RjGngFvTKd5G8cWutObsmOrjwDWrIVgW2FxIIjie0HoAwvHiOr9Arr9qu2449AVur2ciovqu3jz8oPll-BvRyp5vvKsZDsxU3SXoWP8keJ6iaZmgW_RlbEJYxHqiW9hmKm60osN9Lu8EaJQ7ZiUukpiycazn_X-IrkMnekw80MKtKi0CDAWcnETu0bo3qkHxkyW8M-stpqR1095OrNAIZ9nKipbOKsgdiTiTs2x2LrPIqr6ReCLigfv9GD6ifMDFN5c7trppE8E4z5rOypfCg32Sbvj36tDsTq60ABxi9a7oLdtg0uJ8HMKI-8og",
+                    "https://lh7-us.googleusercontent.com/sheets/APBGjhYPwZs5GBbuaF7JJ7RfXWnHllCKwZGiavYcjB6vzbwlm4s9KQ3v3mV-WhGgEhGvVPGc-f7bC4ttHoUNQ99E8ceunJKQ9biNJHlS2HP-T_ornZIVo-IaHOPROX4biXXeEwIJ8eYQUe38t5uW2wH36zmic4CW_X7OxZf7uLWpR1e6LWJB14fdg38FIxzHe0BeSAcQcaHVfV7beRPa7Ptxa1xlHtoz3BHrSTT0fLK1d_X6AIRPOSlgOOnSWoH_ti0zgrtnHy96YYTo3xYfcKp-2M1jLJi14saiK634BY-grpHjDmAWFkx4C-0Yr6xIe-gk6MrL6ZLwzD0Twl6Zjc_UgJ275RmqPLWXa4DapTulACkTT91ZQScgZcy53oW6QRbjbevrh09Qrw_N1dEifv78WG4YQ1EoQLEvj7_OSIPRw4RvKTNGv98d0w6qXDqilsYcBvYkNeOwubLVvfKNaI9qX0qPJWCkdZ2UWjeYJYshR1I3lCOEoMyicgQQkZnxagoDq9Znsgv2EvJnf5vFF3aBLYzY8RkyH6pGZe4KNfeJjFvsg2EZAlwjSZNkbz3WyH8Ip4o-UIkYQiBbR6kyEgBwNgZ3iknpgsk1jy6ePul_tMUJIaIxjgiDT0MOjJ1vXEu94WNhNK_18Vy9hVGLQww1OIwOkR-nml4MknpMdeiqWBFErYQen5VRSm2ciNQRNBua8fQ3zhPyg8z9Q-5gLgkN3Cc_ZJTmxAUa173VrOr3BU2YZJdlSIN8o0qtdzlvisa-cHhdw8kkAQtUK4i_b_vjU_2nyll_k9EhRC8lxc_hhSaOtA7H6-wdgyQQz0CBZdBMd98MyBY7jGnw0ePHkOIK2lN9IwlwOrJA3l3j5_KOAFh71UDagUAFF7JpAaATZoQ46tWgyyEFUVbq6MFdYPgkusZmqDrNQdLevBNqYYfoOEpW7yT43L_GRCwe2CiYGW1iWpevyXqfyPna3nLueXbkzfGFcqc5D4322UejBAZ4CnqweLUBCEXIzcieRscQLCzVqIaCqHJ-jHXimFJ7rPJo3dJX0uB-k4dFFussHC4GszA7eqniJC295AdkcFTd6uyLLw"
+                ],
+                "youtube_link": "https://www.youtube.com/watch?v=xbFwgG-dBOU"
+            }
+        }
+    }
+}

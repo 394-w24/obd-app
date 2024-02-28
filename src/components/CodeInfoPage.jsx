@@ -10,7 +10,7 @@ const CodeInfoPage = () => {
   return (
     <div className="container">
       <div className="inner">
-        <a href="/" className="link">
+        <a href="/navpage" className="link">
           <img src={icon} alt="Repair Icon" className="logo" />
         </a>
       </div>
