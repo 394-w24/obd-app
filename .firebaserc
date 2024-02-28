@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "obd-app-acded"
-  }
+  },
+  "targets": {
+    "obd-app-acded": {
+      "hosting": {
+        "dev": [
+          "repairemate-dev-c33ee"
+        ],
+        "prod": [
+          "repairemate-c33ee"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
