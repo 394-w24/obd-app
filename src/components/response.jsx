@@ -26,34 +26,20 @@ const Response = () => {
                         <li>Total Cost: $2236.684</li>
                     </ul>
                 </li>
-                <li><b>Parts:</b>
-                    <ul>
-                        <li>Part: Catalytic Converter
-                            <ul>
-                                <li>Price: $683.67</li>
-                                <li>Quantity: 1</li>
-                            </ul>
-                        </li>
-                        <li>Part: Transmission
-                            <ul>
-                                <li>Price: $1283.34</li>
-                                <li>Quantity: 1</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><b>TSB:</b>
-                    <ul>
-                        <li>Instructions: <a href="http://downloads.innova.com/tsb-files/118000/4824780.pdf" target="_blank" rel="noopener noreferrer">Download TSB Instructions</a></li>
-                    </ul>
-                </li>
+              
+             
             </ul>
         </div>
+
+        <Link to="/options">
+                <button className="circle-btn">Let's Fix It!</button>
+
         <Link to="/mechanics">
                 <button className="btn btn-primary custom-button">Find Mechanics</button>
         </Link>
         <Link to="/repairguide">
                 <button className="btn btn-primary custom-button">Repair Guide</button>
+
         </Link>
     </div> 
   );

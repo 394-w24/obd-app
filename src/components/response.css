@@ -1,3 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+.circle-btn {
+  background: #F3D1BF; 
+  color: black;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+
+}
+.circle-btn:hover {
+  background: #e7b9a8; 
+  transform: scale(1.05);
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+ul li:last-child {
+  border-bottom: none;
+}
+ul ul {
+  padding-left: 20px;
+}
+a {
+  color: #0275d8;
+  text-decoration: none;
+
+}
 
   body {
     font-family: Arial, sans-serif;
@@ -39,5 +92,6 @@
   .custom-button {
     width: 200px; 
   }
+
 
 

@@ -10,7 +10,9 @@ import LoginPage from "./components/LoginPage"
 import LocalMechanics from './components/LocalMechanics';
 import MechanicPage from './components/MechanicPage';
 import NavButton from './components/NavButton';
+import RepairOptionsPage from './components/RepairOptionsPage';
 import RepairGuide from './components/RepairGuide';
+
 
 const App = ()  => {
   
@@ -23,6 +25,7 @@ const App = ()  => {
           <Route path="/codeinfo" element={<CodeInfoPage /> } />
           <Route path="/profile" element={<ProfilePage /> } />
           <Route path="/mechanics" element={<LocalMechanics/>}/>
+          <Route path="/options" element={<RepairOptionsPage/>}/>
           <Route path="/repairguide" element={<RepairGuide />} />
           {/* <Route path="/mechanic/:mechanicId" element={<MechanicPage /> } /> */}
       </Routes> 
