@@ -1,18 +1,15 @@
 {
   "projects": {
-    "default": "obd-app-acded"
+    "default": "repairemate-dev-c33ee"
   },
   "targets": {
-    "obd-app-acded": {
-      "hosting": {
-        "dev": [
-          "repairemate-dev-c33ee"
-        ],
-        "prod": [
-          "repairemate-c33ee"
-        ]
-      }
+    "dev": {
+      "hosting": "repairemate-dev-c33ee",
+      "public": "dev/dist"
+    },
+    "prod": {
+      "hosting": "repairemate-c33ee",
+      "public": "prod/dist"
     }
-  },
-  "etags": {}
+  }
 }
