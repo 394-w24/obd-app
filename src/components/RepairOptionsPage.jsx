@@ -7,11 +7,11 @@ const RepairOptionsPage = () => {
   return (
     <div className="container">
     <div className="list-group">
-      <button type="button" className="list-group-item list-group-item-action">Quote from local repair</button>
-      <button type="button" className="list-group-item list-group-item-action list-group-item-secondary">Part location</button>
-      <button type="button" className="list-group-item list-group-item-action list-group-item-success">Repair guide</button>
-      <button type="button" className="list-group-item list-group-item-action list-group-item-danger">Parts</button>
-      <button type="button" className="list-group-item list-group-item-action list-group-item-warning">Videos</button>
+      <button type="button" className="btn">Quote from local repair</button>
+      <button type="button" className="btn">Part location</button>
+      <button type="button" className="btn">Repair guide</button>
+      <button type="button" className="btn">Parts</button>
+      <button type="button" className="btn">Videos</button>
     </div>
   </div>
   
