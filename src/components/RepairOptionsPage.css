@@ -1,62 +1,42 @@
 /* Basic button styling */
 .btn {
-  color: rgb(121,117,180) !important; 
+  color: #fff; /* White text color */
+  background-color: rgb(121, 117, 180); /* Soft purple background */
   font-weight: bold;
   font-size: 20px;
   text-align: center;
+  border: none; /* No border */
+  padding: 15px 30px; /* Vertical and horizontal padding */
+  margin-bottom: 5px; /* Space between buttons */
+  box-shadow: 0 4px 8px rgba(121, 117, 180, 0.3); /* Subtle shadow */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
-/* Primary button style */
-.button-primary {
-  color: rgb(121,117,180) !important; 
-  font-weight: bold;
-  font-size: 20px;
-  text-align: center; 
+/* Button hover style */
+.btn:hover {
+  background-color: rgba(121, 117, 180, 0.8); /* Darker purple background on hover */
+  color: #fff; /* Ensure text color is white on hover */
 }
 
-.button-primary:hover {
-  box-shadow: 0 10px 20px 0 rgb(121,117,180) !important; /* Shorter Shadow effect */
-}
-
-
-/* Maintaining other styles for consistency */
-.container {
-  max-width: 600px;
-  margin: auto;
-  background: #fff;
+/* List group styling */
+.list-group {
+  display: grid;
+  grid-gap: 15px; /* Space between grid items */
+  justify-content: center; /* Center grid items horizontally */
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.center-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.col-12.col-md-8 {
+/* Container styling */
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 20px;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-.list-group-item {
-  white-space: normal; /* Ensure the text wraps */
+  padding: 20px;
 }
 
 @media (max-width: 768px) {
-  .list-group-item {
-    padding: .5rem 1.25rem; /* Smaller padding */
+  .btn {
+    font-size: 18px; /* Slightly smaller font size on small screens */
+    padding: 12px 25px; /* Slightly smaller padding on small screens */
   }
 }
-
-  

@@ -29,15 +29,11 @@ const Response = () => {
         </div>
 
         <Link to="/options">
-            <button className="circle-btn">Let's Fix It!</button>
+            <button className="btn btn-primary custom-button">Let's Fix It!</button>
         </Link> {/* This was missing a closing tag */}
 
-        <Link to="/mechanics">
-            <button className="btn btn-primary custom-button">Find Mechanics</button>
-        </Link>
-        <Link to="/repairguide">
-            <button className="btn btn-primary custom-button">Repair Guide</button>
-        </Link>
+        
+        
     </div> 
   );
 };
