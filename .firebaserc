@@ -3,13 +3,16 @@
     "default": "obd-app-acded"
   },
   "targets": {
-    "dev": {
-      "hosting": "obd-app-acded",
-      "public": "dev/dist"
-    },
-    "prod": {
-      "hosting": "obd-app-acded",
-      "public": "prod/dist"
+    "obd-app-acded": {
+      "hosting": {
+        "dev": [
+          "repairmate-dev-c33ee"
+        ],
+        "prod": [
+          "repairmate-c33ee"
+        ]
+      }
     }
-  }
+  },
+  "etags": {}
 }
