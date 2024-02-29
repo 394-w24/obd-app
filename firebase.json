@@ -2,7 +2,7 @@
   "hosting": [{ 
     "target": "dev",
     "public": "dev/dist",
-    "ignore": [
+    "ignore": [ 
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
@@ -19,3 +19,4 @@
   }
 ]
 }
+
