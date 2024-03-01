@@ -6,6 +6,7 @@ import { Link, Navigate } from "react-router-dom";
 import "./response.css"
 import "./response.css"
 import { useNavigate } from "react-router-dom";
+import vinLocationImage from '../assets/vinLocation.jpg';
 
 
 
@@ -13,8 +14,10 @@ import { useNavigate } from "react-router-dom";
 const RequestPage = () => {
     const navigate = useNavigate();
     const [code, setCode] = useState(null);
-    //Add state for vin
+    //Added state for vin - Eraj
     const [vin, setVin] = useState('');
+    //Added state for vin location photo popup visibility - Eraj
+    const [showVinPopup, setShowVinPopup] = useState(false);
 
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -26,9 +29,13 @@ const RequestPage = () => {
       // Instead of setting state, navigate to the CodeInfoPage
       navigate('/codeinfo', { state: formValues });
     };
-    //Handle VIN input change
+    //Handle VIN input change - Eraj
     const handleVinChange = (e) => {
         setVin(e.target.value.toUpperCase()); //Convert to uppercase
+      };
+    //Toggle VIN location photo popup visibility - Eraj
+    const toggleVinPopup = () => {
+        setShowVinPopup(!showVinPopup);
       };
     return (
         <div className="container">
@@ -42,8 +49,8 @@ const RequestPage = () => {
                 <p className="form-descriptor">To learn more about your car's required maintenance, input some information about your car and its DTC code.</p>
                 <form className="form" onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <h4 className="input-label" style={{marginBottom: "0rem"}}>VIN Number:</h4>
-                        <a href="https://www.txdmv.gov/motorists/how-to-find-the-vin" className="small-link" target="_blank" rel="noopener noreferrer">What is a VIN number?</a>
+                        <h4 className="input-label" style={{marginBottom: "0rem"}} >VIN Number:</h4>
+                        <button type="button" className="small-link" onClick={toggleVinPopup}>What is a VIN number and how to locate it?</button>
                         <input type="text" className="form-control" name="vin" placeholder="Ex. 4Y1SL65848Z411439" value={vin} onChange={handleVinChange}/>
                     </div>
                     <hr className="divider"></hr>
@@ -59,6 +66,14 @@ const RequestPage = () => {
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
             </div>
+            {showVinPopup && (
+                <div className="vin-popup">
+                    <div className="vin-popup-content">
+                        <span className="close-popup" onClick={toggleVinPopup}>&times;</span>
+                        <img src={vinLocationImage} alt="Common VIN Locations" />
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
