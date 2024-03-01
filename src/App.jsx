@@ -12,6 +12,8 @@ import MechanicPage from './components/MechanicPage';
 import NavButton from './components/NavButton';
 import RepairOptionsPage from './components/RepairOptionsPage';
 import RepairGuide from './components/RepairGuide';
+import VideoPage from './components/VideoPage';
+import PartsLocationPage from './components/PartsLocationPage';
 
 
 const App = ()  => {
@@ -27,6 +29,8 @@ const App = ()  => {
           <Route path="/mechanics" element={<LocalMechanics/>}/>
           <Route path="/options" element={<RepairOptionsPage/>}/>
           <Route path="/repairguide" element={<RepairGuide />} />
+          <Route path="/videos" element={<VideoPage />} />
+          <Route path="/location" element={<PartsLocationPage />} />
           {/* <Route path="/mechanic/:mechanicId" element={<MechanicPage /> } /> */}
       </Routes> 
       <NavButton/>

@@ -23,9 +23,9 @@ const NavPage = () => {
               </Link>
           </div>
         </div>
-        <div className="card" style={{ width: '18rem' }}>
+        <div className="card" style={{ width: '18rem', backgroundColor: 'grey'}}>
           <div className="card-body">
-            <h3 className="card-title">Maintenance</h3>
+            <h3 style={{color: "white", fontWeight: "bold", fontSize: "20px", textAlign: "center"}}>Maintenance</h3>
           </div>
         </div>
       </div>

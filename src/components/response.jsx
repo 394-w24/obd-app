@@ -4,36 +4,17 @@ import icon from ".././icons/carRepair.png";
 
 const Response = () => {
   return (
-    <div className="container">
+    <div className='container'>
         <div>
-            <h3 style={{textAlign: "center"}}>
-                <b>Repair Description</b>
-            </h3>
+            <h4 style={{textAlign: "center"}}>P0150</h4>
             <ul>
-                <li>Replace Catalytic Converter(s) with new OE Catalytic Converter(s)</li>
-                <li><b>Urgency:</b> 2
-                    <ul>
-                        <li>Urgency Description: Repair immediately if drivability issues are present. Threat to essential system components if not repaired as soon as possible.</li>
-                    </ul>
-                </li>
-                <li><b>Repair:</b>
-                    <ul>
-                        <li>Difficulty: 3</li>
-                        <li>Part Cost: $1967.01</li>
-                        <li>Labor Cost: $244.674</li>
-                        <li>Misc Cost: $25</li>
-                        <li>Total Cost: $2236.684</li>
-                    </ul>
-                </li>
+                    <li>O2 Sensor Circuit Malfunctions</li>
             </ul>
         </div>
 
         <Link to="/options">
-            <button className="btn btn-primary custom-button">Let's Fix It!</button>
+            <button className="btn btn-primary custom-button" >Let's Fix It!</button>
         </Link> {/* This was missing a closing tag */}
-
-        
-        
     </div> 
   );
 };

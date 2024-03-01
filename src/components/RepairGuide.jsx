@@ -1,12 +1,13 @@
 import React from 'react';
 import guideData from '../data/repair.json'; 
+import './RepairGuide.css'
 import icon from ".././icons/carRepair.png";
 
 const RepairGuide = () => {
     const dtcEntries = guideData['Repair Guide']['DTC'];
 
     return (
-        <div>
+        <div className='container'>
             <a href="/navpage" className="link">
                 <img src={icon} alt="Repair Icon" className="logo" />
             </a>
