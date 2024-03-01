@@ -55,13 +55,13 @@ const RequestPage = () => {
                     </div>
                     <hr className="divider"></hr>
                     <div className="form-group">
-                        <h4 className="input-label">Car Mileage:</h4>
-                        <input type="text" className="form-control" name="miles" placeholder="Ex. 45689" />
+                        <h4 className="input-label">DTC Code:</h4>
+                        <input type="text" className="form-control" name="code" placeholder="Ex. P0100" />
                     </div>
                     <hr className="divider"></hr>
                     <div className="form-group">
-                        <h4 className="input-label">DTC Code:</h4>
-                        <input type="text" className="form-control" name="code" placeholder="Ex. P0100" />
+                        <h4 className="input-label">Car Mileage:</h4>
+                        <input type="text" className="form-control" name="miles" placeholder="Ex. 45689" />
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
