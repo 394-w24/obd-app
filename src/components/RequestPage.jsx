@@ -7,17 +7,19 @@ import "./response.css"
 import "./response.css"
 import { useNavigate } from "react-router-dom";
 import vinLocationImage from '../assets/vinLocation.jpg';
+import ErrorModal from "./ErrorModal";
 
 
 
 
 const RequestPage = () => {
     const navigate = useNavigate();
-    const [code, setCode] = useState(null);
     //Added state for vin - Eraj
     const [vin, setVin] = useState('');
     //Added state for vin location photo popup visibility - Eraj
     const [showVinPopup, setShowVinPopup] = useState(false);
+
+    const [error, setError] = useState();
 
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -26,9 +28,15 @@ const RequestPage = () => {
         miles: e.target.miles.value,
         code: e.target.code.value
       };
-      // Instead of setting state, navigate to the CodeInfoPage
-      navigate('/codeinfo', { state: formValues });
+      //check for valid DTC code (in this case only p0150)
+      if (formValues.code == 'p0150' || formValues.code == 'P0150'){
+        navigate('/codeinfo', { state: formValues });
+        
+      }else{
+        setError(true)
+      }
     };
+
     //Handle VIN input change - Eraj
     const handleVinChange = (e) => {
         setVin(e.target.value.toUpperCase()); //Convert to uppercase
@@ -37,6 +45,12 @@ const RequestPage = () => {
     const toggleVinPopup = () => {
         setShowVinPopup(!showVinPopup);
       };
+
+    //close error modal for wrong dtc code
+    const handleCloseModal = () => {
+        setError(false);
+    };
+
     return (
         <div className="container">
             <div className="inner">
@@ -55,13 +69,13 @@ const RequestPage = () => {
                     </div>
                     <hr className="divider"></hr>
                     <div className="form-group">
-                        <h4 className="input-label">Car Mileage:</h4>
-                        <input type="text" className="form-control" name="miles" placeholder="Ex. 45689" />
+                        <h4 className="input-label">DTC Code:</h4>
+                        <input type="text" className="form-control" name="code" placeholder="Ex. P0100" />
                     </div>
                     <hr className="divider"></hr>
                     <div className="form-group">
-                        <h4 className="input-label">DTC Code:</h4>
-                        <input type="text" className="form-control" name="code" placeholder="Ex. P0100" />
+                        <h4 className="input-label">Car Mileage:</h4>
+                        <input type="text" className="form-control" name="miles" placeholder="Ex. 45689" />
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
@@ -74,6 +88,9 @@ const RequestPage = () => {
                     </div>
                 </div>
             )}
+            {error && 
+                <ErrorModal onClose={handleCloseModal}/>
+            }
         </div>
     );
 }
