@@ -13,17 +13,23 @@ import { useNavigate } from "react-router-dom";
 const RequestPage = () => {
     const navigate = useNavigate();
     const [code, setCode] = useState(null);
-  
+    //Add state for vin
+    const [vin, setVin] = useState('');
+
     const handleSubmit = (e) => {
       e.preventDefault();
       const formValues = {
-        vin: e.target.vin.value,
+        vin: vin,
         miles: e.target.miles.value,
         code: e.target.code.value
       };
       // Instead of setting state, navigate to the CodeInfoPage
       navigate('/codeinfo', { state: formValues });
     };
+    //Handle VIN input change
+    const handleVinChange = (e) => {
+        setVin(e.target.value.toUpperCase()); //Convert to uppercase
+      };
     return (
         <div className="container">
             <div className="inner">
@@ -38,7 +44,7 @@ const RequestPage = () => {
                     <div className="form-group">
                         <h4 className="input-label" style={{marginBottom: "0rem"}}>VIN Number:</h4>
                         <a href="https://www.txdmv.gov/motorists/how-to-find-the-vin" className="small-link" target="_blank" rel="noopener noreferrer">What is a VIN number?</a>
-                        <input type="text" className="form-control" name="vin" placeholder="Ex. 4Y1SL65848Z411439" />
+                        <input type="text" className="form-control" name="vin" placeholder="Ex. 4Y1SL65848Z411439" value={vin} onChange={handleVinChange}/>
                     </div>
                     <hr className="divider"></hr>
                     <div className="form-group">
