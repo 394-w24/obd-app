@@ -7,10 +7,14 @@
     box-shadow: 0 0 2em hsl(231deg, 62%, 94%);
     gap: 2em;
     margin: auto;
+    padding-top: 30%;
+    padding-bottom: 25%;
   }
   
-  .screen-1 .logo {
-    margin-top: -3em;
+
+
+  .logo {
+    margin-top: 10em;
   }
   
   .email, .password {
@@ -40,6 +44,18 @@
   .password .show-hide {
     margin-right: -5em;
   }
+
+  .header {
+    color: rgb(121,117,180);
+    font-size: 3em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }
   
   .login {
     padding: 1em;
@@ -48,6 +64,9 @@
     border: none;
     border-radius: 30px;
     font-weight: 600;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
   }
   
   .footer {
@@ -56,6 +75,10 @@
     color: hsl(0deg, 0%, 37%);
     gap: 14em;
     padding-bottom: 10em;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
   }
   
   .footer span {
