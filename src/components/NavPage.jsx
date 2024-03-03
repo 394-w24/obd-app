@@ -19,7 +19,7 @@ const NavPage = () => {
         <div className="card" style={{ width: '18rem' }}>
           <div className="card-body">
               <Link className="card-title" style= {{textAlign:"center"}} to="/request">            
-                <h3 className="card-title">Diagnostics</h3>
+                <h3 className="card-title">Repair</h3>
               </Link>
           </div>
         </div>
