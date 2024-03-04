@@ -136,6 +136,11 @@
     font-weight: bold;
     cursor: pointer;
 }
+.help-popup {
+    font-size: 14px;
+    color: navy;
+}
+
 
 @media (max-width: 600px) {
     .vin-popup-content {

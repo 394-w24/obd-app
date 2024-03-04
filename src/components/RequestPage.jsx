@@ -15,17 +15,18 @@ import ErrorModal from "./ErrorModal";
 const RequestPage = () => {
     const navigate = useNavigate();
     //Added state for vin - Eraj
-    const [vin, setVin] = useState('');
+    const [vin, setVin] = useState('4Y1SL65848Z411439');
     //Added state for vin location photo popup visibility - Eraj
     const [showVinPopup, setShowVinPopup] = useState(false);
-
+    const [miles, setMiles] = useState('45689');
     const [error, setError] = useState();
+    const [showHelpPopup, setShowHelpPopup] = useState(false);
 
     const handleSubmit = (e) => {
       e.preventDefault();
       const formValues = {
         vin: vin,
-        miles: e.target.miles.value,
+        miles: miles,
         code: e.target.code.value
       };
       //check for valid DTC code (in this case only p0150)
@@ -46,10 +47,20 @@ const RequestPage = () => {
         setShowVinPopup(!showVinPopup);
       };
 
+      const handleMilesChange = (e) => {
+        setMiles(e.target.value); // Update miles state
+    };
+
     //close error modal for wrong dtc code
     const handleCloseModal = () => {
         setError(false);
     };
+
+    //toggle help popup
+    const toggleHelpPopup = () => {
+        setShowHelpPopup(!showHelpPopup);
+    };
+    
 
     return (
         <div className="container">
@@ -70,14 +81,21 @@ const RequestPage = () => {
                     <hr className="divider"></hr>
                     <div className="form-group">
                         <h4 className="input-label">DTC Code:</h4>
+                        <button type="button" className="small-link" onClick={toggleHelpPopup}>Help</button>
+                        {showHelpPopup && (
+                            <div className="help-popup">
+                                Enter currently supported DTC code: P0150
+                            </div>
+                        )}
                         <input type="text" className="form-control" name="code" placeholder="Ex. P0100" />
+                        
                     </div>
                     <hr className="divider"></hr>
                     <div className="form-group">
                         <h4 className="input-label">Car Mileage:</h4>
-                        <input type="text" className="form-control" name="miles" placeholder="Ex. 45689" />
+                        <input type="text" className="form-control" name="miles" value = {miles} placeholder="Ex. 45689" onChange={handleMilesChange}/>
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn btn-primary">Repair</button>
                 </form>
             </div>
             {showVinPopup && (
