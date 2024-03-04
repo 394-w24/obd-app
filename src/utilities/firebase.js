@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { useEffect, useState} from 'react';
-import { getDatabase} from 'firebase/database';
+import { getDatabase, onValue, ref} from 'firebase/database';
 import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from 'firebase/auth';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -46,4 +46,18 @@ export const isUser = () => {
   return user ? true : false
 }
 
-export default database;
+export const useDbData = (path) => {
+  const [data, setData] = useState();
+  const [error, setError] = useState();
+
+  useEffect(() => (
+    onValue(ref(database, path), (snapshot) => {
+     setData( snapshot.val() );
+    }, (error) => {
+      setError(error);
+    })
+  ), [ path ]);
+
+  return [ data, error ];
+};
+
