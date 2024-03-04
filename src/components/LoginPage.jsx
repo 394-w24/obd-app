@@ -58,7 +58,7 @@ const LoginPage = () => {
         </div>
       </div>
       <button className="login" onClick={loginWithEmail}>Login</button> */}
-      <p1 className="header">RepairMate</p1>
+      <p1 className="header" data-cy="repairmate">RepairMate</p1>
       <button className="login" onClick={loginWithGoogle}>Log In with Google</button>
       <div className="footer">
         <span>Don't have an account? Sign Up</span>

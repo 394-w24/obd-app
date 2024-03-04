@@ -73,8 +73,8 @@ const RequestPage = () => {
             <div className="form-container">
                 <p className="form-descriptor">To learn more about your car's required maintenance, input some information about your car and its DTC code.</p>
                 <form className="form" onSubmit={handleSubmit}>
-                    <div className="form-group">
-                        <h4 className="input-label" style={{marginBottom: "0rem"}} >VIN Number:</h4>
+                    <div className="form-group" >
+                        <h4 className="input-label" style={{marginBottom: "0rem"}} data-cy="VINnumber">VIN Number:</h4>
                         <button type="button" className="small-link" onClick={toggleVinPopup}>What is a VIN number and how to locate it?</button>
                         <input type="text" className="form-control" name="vin" placeholder="Ex. 4Y1SL65848Z411439" value={vin} onChange={handleVinChange}/>
                     </div>

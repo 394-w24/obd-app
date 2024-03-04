@@ -17,7 +17,7 @@ const NavPage = () => {
       <h3>Welcome, {username}!</h3>
       <div className='nav-list'>
         <div className="card" style={{ width: '18rem' }}>
-          <div className="card-body">
+          <div className="card-body" data-cy="repair">
               <Link className="card-title" style= {{textAlign:"center"}} to="/request">            
                 <h3 className="card-title">Repair</h3>
               </Link>
