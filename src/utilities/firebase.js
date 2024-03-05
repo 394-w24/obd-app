@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { useEffect, useState} from 'react';
 import { getDatabase, onValue, ref, connectDatabaseEmulator} from 'firebase/database';
-import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut, connectAuthEmulator, signInWithCredential } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut, signInWithRedirect, connectAuthEmulator, signInWithCredential } from 'firebase/auth';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -37,7 +37,7 @@ const database = getDatabase(app);
 
 
 export const signInWithGoogle = () => {
-  signInWithPopup(getAuth(app), new GoogleAuthProvider());
+  signInWithRedirect(getAuth(app), new GoogleAuthProvider());
 };
 
 const firebaseSignOut = () => signOut(getAuth(app));
