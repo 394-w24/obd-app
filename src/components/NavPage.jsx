@@ -1,16 +1,26 @@
 import React from 'react';
 import "./NavPage.css"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import profile from ".././icons/user.png"
 import repair from ".././icons/carRepair.png"
 import settings from ".././icons/settings.png"
 import contact from ".././icons/contact.png"
-import { useAuthState } from '.././utilities/firebase';
+import { useAuthState, signOut } from '.././utilities/firebase';
 
 
 const NavPage = () => {
 
   const username = useAuthState()[0]?.displayName
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await signOut();
+      navigate('/'); // Redirect to login page
+    } catch (error) {
+      console.error('Logout failed', error);
+    }
+  };
 
   return (
     <div className="container">
@@ -29,6 +39,7 @@ const NavPage = () => {
           </div>
         </div>
       </div>
+      <button onClick={handleLogout} className="btn btn-primary">Logout</button>
     </div>
   );
 };
