@@ -22,6 +22,11 @@
     position: relative; /* For positioning the close button absolutely within the modal */
 }
 
+.centered-text {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
 .parts-modal-close {
     position: absolute;
     top: 10px; /* Close button position from the top of the modal content */

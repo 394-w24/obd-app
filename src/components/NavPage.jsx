@@ -24,6 +24,7 @@ const NavPage = () => {
 
   return (
     <div className="container">
+  
       <h3>Welcome, {username}!</h3>
       <div className='nav-list'>
         <div className="card" style={{ width: '18rem' }}>
