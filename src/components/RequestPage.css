@@ -14,11 +14,14 @@
     color: inherit;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .logo {
-    width: 50px;
-    height: auto;
+    width: 24px;
+    height: 24px;
+    align-self: center; 
+    margin-top: 0em;
     margin-right: 10px;
 }
 

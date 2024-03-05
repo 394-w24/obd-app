@@ -21,9 +21,12 @@ const  LocalMechanics = () => {
 
   return (
     <div className='container'>
-      <a href="/navpage" className="link">
-        <img src={icon} alt="Repair Icon" className="logo" />
-      </a>
+      <div>
+          <a href="/navpage" className="link">
+              <img src={icon} alt="Repair Icon" className="logo"/>
+              <span className="title">RepairMate</span>
+          </a>
+      </div>
       <h1>Mechanics Near You</h1>
       {Object.values(mechanics).sort((a, b) => b.Rating - a.Rating ).map(mechanic => 
         <MechanicCard name = {mechanic.Name} quote = {mechanic.Quote} rating = {mechanic.Rating}/>

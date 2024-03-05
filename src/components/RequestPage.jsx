@@ -64,9 +64,9 @@ const RequestPage = () => {
 
     return (
         <div className="container">
-            <div className="inner">
+            <div>
                 <a href="/navpage" className="link">
-                    <img src={icon} alt="Repair Icon" className="logo" />
+                    <img src={icon} alt="Repair Icon" className="logo"/>
                     <span className="title">RepairMate</span>
                 </a>
             </div>

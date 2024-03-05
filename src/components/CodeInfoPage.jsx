@@ -9,12 +9,13 @@ const CodeInfoPage = () => {
 
   return (
     <div className="container">
-      <div className="inner">
-        <a href="/navpage" className="link">
-          <img src={icon} alt="Repair Icon" className="logo" />
-        </a>
+      <div>
+          <a href="/navpage" className="link">
+              <img src={icon} alt="Repair Icon" className="logo"/>
+              <span className="title">RepairMate</span>
+          </a>
       </div>
-      <h1 className="title">Code Information</h1>
+      <h1>Code Information</h1>
       {formData.vin && <p>VIN: {formData.vin}</p>}
       {formData.miles && <p>Mileage: {formData.miles}</p>}
       {/* {formData.code && <p>Code: {formData.code}</p>} */}
