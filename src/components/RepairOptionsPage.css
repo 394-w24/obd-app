@@ -68,3 +68,17 @@
     padding: 12px 25px; /* Slightly smaller padding on small screens */
   }
 }
+
+.link {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+
+.logo, .title {
+  margin: 0;
+  padding: 5px;
+}
+
+
