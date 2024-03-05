@@ -1,0 +1,54 @@
+/* PartsModal.css */
+.parts-modal-overlay {
+    position: fixed; /* Full screen overlay */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    display: flex;
+    align-items: center; /* Vertical center */
+    justify-content: center; /* Horizontal center */
+    z-index: 1000; /* Make sure it's above other content */
+}
+
+.parts-modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px; /* Slightly rounded corners for the modal */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 500px; /* Maximum width of the modal */
+    width: 90%; /* Use 90% of the screen width on smaller screens */
+    position: relative; /* For positioning the close button absolutely within the modal */
+}
+
+.parts-modal-close {
+    position: absolute;
+    top: 10px; /* Close button position from the top of the modal content */
+    right: 10px; /* Close button position from the right of the modal content */
+    background: transparent;
+    border: none;
+    font-size: 24px; /* Size of the close button */
+    cursor: pointer; /* Change cursor to pointer when hovering over the button */
+    color: #707070; /* Color of the close button */
+}
+
+.parts-modal-content img {
+    max-width: 100%; /* Ensure image is responsive and does not overflow the modal */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space under image */
+    margin-bottom: 20px; /* Space between image and text */
+}
+
+.parts-modal-content p {
+    color: #333; /* Text color */
+    font-size: 16px; /* Text size */
+    line-height: 1.5; /* Line height for better readability */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+@media (max-width: 768px) {
+    .parts-modal-content {
+        padding: 15px; /* Slightly less padding on smaller screens */
+    }
+}
