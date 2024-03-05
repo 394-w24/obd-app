@@ -58,7 +58,7 @@ const RepairOptionsPage = () => {
           <button type="button" className="btn btn-primary" onClick={() => setImageModalOpen(true)}>Repair guide</button> 
           <button type="button" className="btn btn-primary" onClick={() => setOpen(true)}>DIY Video Guide</button>
           <button type="button" className="btn btn-primary" style={{ backgroundColor: 'grey' }} onClick={showPartsModal}>Buy Parts</button>
-          <button type="button" className="btn btn-primary" onClick={() => navigate('/mechanics')}>Quote from local repair</button>
+          <button type="button" className="btn btn-primary" style={{ backgroundColor: 'grey' }} onClick={() => navigate('/mechanics')}>Quote from local repair</button>
         </div>
       </div>
     </>
