@@ -25,7 +25,7 @@ const  LocalMechanics = () => {
         <img src={icon} alt="Repair Icon" className="logo" />
       </a>
       <h1>Mechanics Near You</h1>
-      {Object.values(mechanics).map(mechanic => 
+      {Object.values(mechanics).sort((a, b) => b.Rating - a.Rating ).map(mechanic => 
         <MechanicCard name = {mechanic.Name} quote = {mechanic.Quote} rating = {mechanic.Rating}/>
       )}
     </div>

@@ -6,6 +6,10 @@ import 'react-modal-video/css/modal-video.min.css';
 import icon from "../icons/carRepair.png";
 import guideData from '../data/repair.json';
 import PartsModal from './PartsModal'; 
+import ImageModal from './ImageModal';
+import rp1 from '../assets/rp1.jpg';
+import rp2 from '../assets/rp2.jpg';
+
 
 const RepairOptionsPage = () => {
   let navigate = useNavigate();
@@ -16,6 +20,13 @@ const RepairOptionsPage = () => {
   const videoId = getYoutubeVideoID(dtcData['youtube_link']);
   const [isVideoOpen, setVideoOpen] = useState(false);
   const [isPartsModalOpen, setPartsModalOpen] = useState(false); // New state for the parts modal
+
+  const [isImageModalOpen, setImageModalOpen] = useState(false);
+  const images = [
+
+    { src: rp2, alt: 'Repair Guide image 1' },
+    { src: rp1, alt: 'Repair Guide Image 2' },
+  ];
 
 
   function getYoutubeVideoID(url) {
@@ -34,6 +45,7 @@ const RepairOptionsPage = () => {
     <>
       <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={videoId} onClose={() => setOpen(false)} />
       <PartsModal isOpen={isPartsModalOpen} onClose={() => setPartsModalOpen(false)} />
+      <ImageModal isOpen={isImageModalOpen} onClose={() => setImageModalOpen(false)} images={images} />
       <div className="container">
         <div className="inner">
           <a href="/navpage" className="link">
@@ -43,10 +55,10 @@ const RepairOptionsPage = () => {
         </div>
         <div className="list-group">
           <button type="button" className="btn btn-primary" onClick={() => navigate('/location')}>Part location</button>
-          <button type="button" className="btn btn-primary" onClick={() => navigate('/repairguide')}>Repair guide</button>
+          <button type="button" className="btn btn-primary" onClick={() => setImageModalOpen(true)}>Repair guide</button> 
           <button type="button" className="btn btn-primary" onClick={() => setOpen(true)}>DIY Video Guide</button>
           <button type="button" className="btn btn-primary" style={{ backgroundColor: 'grey' }} onClick={showPartsModal}>Buy Parts</button>
-          <button type="button" className="btn btn-primary" style={{ backgroundColor: 'grey' }} onClick={() => navigate('/mechanics')}>Quote from local repair</button>
+          <button type="button" className="btn btn-primary" onClick={() => navigate('/mechanics')}>Quote from local repair</button>
         </div>
       </div>
     </>

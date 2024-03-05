@@ -15,10 +15,10 @@ import ErrorModal from "./ErrorModal";
 const RequestPage = () => {
     const navigate = useNavigate();
     //Added state for vin - Eraj
-    const [vin, setVin] = useState('4Y1SL65848Z411439');
+    const [vin, setVin] = useState('');
     //Added state for vin location photo popup visibility - Eraj
     const [showVinPopup, setShowVinPopup] = useState(false);
-    const [miles, setMiles] = useState('45689');
+    const [miles, setMiles] = useState('');
     const [error, setError] = useState();
     const [showHelpPopup, setShowHelpPopup] = useState(false);
 
