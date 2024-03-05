@@ -8,7 +8,6 @@ import ProfilePage from './components/ProfilePage';
 import NavPage from './components/NavPage';
 import LoginPage from "./components/LoginPage"
 import LocalMechanics from './components/LocalMechanics';
-import MechanicPage from './components/MechanicPage';
 import NavButton from './components/NavButton';
 import RepairOptionsPage from './components/RepairOptionsPage';
 import RepairGuide from './components/RepairGuide';
