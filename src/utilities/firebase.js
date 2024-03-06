@@ -35,9 +35,8 @@ const database = getDatabase(app);
 //   globalThis.EMULATION = true;
 // }
 
-
 export const signInWithGoogle = () => {
-  signInWithRedirect(getAuth(app), new GoogleAuthProvider());
+  signInWithPopup(auth, new GoogleAuthProvider);
 };
 
 const firebaseSignOut = () => signOut(getAuth(app));
