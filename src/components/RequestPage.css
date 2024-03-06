@@ -76,7 +76,7 @@
     margin: 20px 0;
 }
 
-.btn {
+.button {
     padding: 10px 20px;
     background-color: rgb(121,117,180);
     color: #fff;
@@ -86,7 +86,7 @@
     transition: background-color 0.3s ease;
 }
 
-.btn-primary {
+.button-primary {
     background-color:rgb(121,117,180);
 }
 

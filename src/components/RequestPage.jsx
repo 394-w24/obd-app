@@ -95,7 +95,7 @@ const RequestPage = () => {
                         <h4 className="input-label">Car Mileage:</h4>
                         <input type="text" className="form-control" name="miles" value = {miles} placeholder="Ex. 45689" onChange={handleMilesChange}/>
                     </div>
-                    <button type="submit" className="btn btn-primary" style={{marginLeft: "0px", marginRight: "0px", width: "auto"}}>Repair</button>
+                    <button type="submit" className="button button-primary">Repair</button>
                 </form>
             </div>
             {showVinPopup && (
