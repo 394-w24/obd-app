@@ -1,10 +1,15 @@
 import React from 'react';
 import { useState } from 'react';
 import "@fortawesome/fontawesome-free/css/all.css";
-import { Document, Page} from 'react-pdf';
+import { haversineDistance } from '../utilities/coordinates';
 import "./MechanicCard.css";
 
-  const MechanicCard = ({name, quote, rating}) => {
+  const MechanicCard = ({name, quote, rating, lat, lon}) => {
+
+    const currentLat = 42.057838
+    const currentLong = -87.676140
+
+    const distance = haversineDistance(currentLat, currentLong, lat, lon)
 
     const [quoteReceived, setQuoteReceived] = useState()
     const [viewQuote, setViewQuote] = useState()
@@ -16,8 +21,6 @@ import "./MechanicCard.css";
       setQuoteReceived(true)
     }
 
-    console.log(quote)
-
     const viewQuoteClicked = () => {
       setViewQuote(true)
     }
@@ -26,6 +29,7 @@ import "./MechanicCard.css";
       setViewQuote(false)
     }
     return (
+      <div>
       <div className="card" style={{ width: '90%' }}>
         <div className="card-body">
           <div className="card-title">
@@ -33,22 +37,28 @@ import "./MechanicCard.css";
               {name}
             </div>
             <div>
-              {rating}/5.0 <i className="fa-solid fa-star" />
+              {rating}/5.0 <i className="fa-solid fa-star" /> 
+              <br/>
+              {distance.toFixed(2)} mi away
             </div>
           </div>
-          <div style={{justifyContent: "center"}}>
-          <button type="button" className="btn btn-primary" onClick={quoteRequested}>Request Quote</button>
-          {quoteReceived ? <button type="button" style = {{padding:"15px 35px", fontSize: "20px"}}className="btn btn-primary" onClick={viewQuoteClicked}>View Quote</button> : <button type="button" className="btn btn-primary" disabled>View Quote</button>}
+          <div style={{justifyContent: "center", alignContent: "center"}}>
+            <button type="button" className="btn btn-primary" onClick={quoteRequested}>Request Quote</button>
+            <br/>
+            {quoteReceived ? <button type="button" className="btn btn-primary" onClick={viewQuoteClicked}>View Quote</button> : <button type="button" className="btn btn-primary" disabled>View Quote</button>}
           </div>
         </div>
+      </div>
+      <div>
         {viewQuote && (
                 <div className="quote-popup">
                     <div className="quote-popup-content">
                         <span className="close-popup" onClick={closePopup}>&times;</span>
-                        <iframe src={quote}/>
+                        <iframe src={quote} style={{ height: '100%' }}/>
                     </div>
                 </div>
             )}
+        </div>
       </div>
   );
 };

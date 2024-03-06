@@ -5,7 +5,6 @@ import { useDbData } from '../utilities/firebase';
 
 const  LocalMechanics = () => {
   const mechanics = useDbData("/Mechanics")[0]  
-  console.log("mechanics", mechanics)
 
   if (mechanics === undefined) {
     return (
@@ -29,7 +28,7 @@ const  LocalMechanics = () => {
       </div>
       <h1>Mechanics Near You</h1>
       {Object.values(mechanics).sort((a, b) => b.Rating - a.Rating ).map(mechanic => 
-        <MechanicCard name = {mechanic.Name} quote = {mechanic.Quote} rating = {mechanic.Rating}/>
+        <MechanicCard name = {mechanic.Name} quote = {mechanic.Quote} rating = {mechanic.Rating} lat = {mechanic.Latitude} lon = {mechanic.Longitude} />
       )}
     </div>
   );

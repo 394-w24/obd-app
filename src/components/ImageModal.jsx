@@ -6,11 +6,11 @@ const ImageModal = ({ isOpen, onClose, images }) => {
     return (
       <div className="modal-overlay">
         <div className="modal-content">
+        <h2 className="centered-text">Repair Guide</h2>
         <span className="close-modal" onClick={onClose}>&times;</span>
           {images.map((image, index) => (
             <img key={index} src={image.src} alt={image.alt} className="modal-image"/>
           ))}
-          <button onClick={onClose}>Close</button>
         </div>
       </div>
     );
