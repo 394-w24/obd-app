@@ -12,12 +12,27 @@
     z-index: 1000; /* Make sure it's above other content */
 }
 
+.text {
+    padding-top: 10px;
+}
+
+.text-box {
+    border: 1px solid #ccc; /* Light grey border */
+    padding: 16px; /* Spacing inside the box */
+    margin-top: 16px; /* Spacing above the box */
+    margin-bottom: 16px; /* Spacing below the box */
+    background-color: white; /* White background for the text box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow to the box */
+  
+}
 .parts-modal-content {
     background: #fff;
     padding: 20px;
     border-radius: 8px; /* Slightly rounded corners for the modal */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     max-width: 500px; /* Maximum width of the modal */
+    overflow-y: auto; /* Enable vertical scrolling if content is taller than the modal */
+    max-height: 90%; /* You can adjust this value as per your design needs */
     width: 90%; /* Use 90% of the screen width on smaller screens */
     position: relative; /* For positioning the close button absolutely within the modal */
 }
