@@ -54,11 +54,11 @@ const RepairOptionsPage = () => {
           </a>
         </div>
         <div className="list-group">
-          <button type="button" className="btn btn-primary" onClick={showPartsModal}>Part location</button>
-          <button type="button" className="btn btn-primary" onClick={() => setImageModalOpen(true)}>Repair guide</button> 
+          <button type="button" className="btn btn-primary" onClick={showPartsModal}>Part Location</button>
+          <button type="button" className="btn btn-primary" onClick={() => setImageModalOpen(true)}>Repair Guide</button> 
           <button type="button" className="btn btn-primary" onClick={() => setOpen(true)}>DIY Video Guide</button>
           <button type="button" className="btn btn-primary disabled" style={{ backgroundColor: 'grey' }}>Buy Parts</button>
-          <button type="button" className="btn btn-primary" onClick={() => navigate('/mechanics')}>Quote from local repair</button>
+          <button type="button" className="btn btn-primary" onClick={() => navigate('/mechanics')}>Quote from Local Repair</button>
         </div>
       </div>
     </>
