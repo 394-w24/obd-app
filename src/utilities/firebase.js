@@ -36,7 +36,9 @@ const database = getDatabase(app);
 // }
 
 export const signInWithGoogle = () => {
-  signInWithPopup(auth, new GoogleAuthProvider);
+  signInWithPopup(auth, new GoogleAuthProvider().setCustomParameters({
+    prompt: 'select_account',
+  }));
 };
 
 const firebaseSignOut = () => signOut(getAuth(app));
