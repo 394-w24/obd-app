@@ -2,12 +2,12 @@ import React from "react";
 import { useState } from "react";
 import icon from ".././icons/carRepair.png"
 import "./RequestPage.css"
-import { Link, Navigate } from "react-router-dom";
 import "./response.css"
 import "./response.css"
 import { useNavigate } from "react-router-dom";
 import vinLocationImage from '../assets/vinLocation.jpg';
 import ErrorModal from "./ErrorModal";
+import DTCImage from "../assets/DTC.jpg";
 
 
 
@@ -21,6 +21,7 @@ const RequestPage = () => {
     const [miles, setMiles] = useState('');
     const [error, setError] = useState();
     const [showHelpPopup, setShowHelpPopup] = useState(false);
+    const [showDtcPopup, setShowDtcPopup] = useState(false);
 
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -46,6 +47,10 @@ const RequestPage = () => {
     const toggleVinPopup = () => {
         setShowVinPopup(!showVinPopup);
       };
+
+    const toggleDtcPopup = () => {
+    setShowDtcPopup(!showDtcPopup);
+    };
 
       const handleMilesChange = (e) => {
         setMiles(e.target.value); // Update miles state
@@ -81,13 +86,22 @@ const RequestPage = () => {
                     <hr className="divider"></hr>
                     <div className="form-group">
                         <h4 className="input-label">DTC Code:</h4>
-                        <button type="button" className="small-link" onClick={toggleHelpPopup}>Help</button>
-                        {showHelpPopup && (
-                            <div className="help-popup">
-                                Enter currently supported DTC code: P0150
+                        <button type="button" className="small-link" onClick={toggleDtcPopup}>How to retrieve DTC Code?</button>
+                        {showDtcPopup && (
+                            <div className="vin-popup"> 
+                                <div className="vin-popup-content">
+                                    <span className="close-popup" onClick={toggleDtcPopup}>&times;</span>
+                                    <img src={DTCImage} alt="How to retrieve DTC Code" />
+                                    <div className="help-popup">
+                                        *Enter currently supported DTC code: P0150
+                                    </div>
+                    
+                        
+                        
+                                </div>
                             </div>
                         )}
-                        <input type="text" className="form-control" name="code" placeholder="Ex. P0100" />
+                        <input type="text" className="form-control" name="code" placeholder="Ex. P0150" />
                         
                     </div>
                     <hr className="divider"></hr>
