@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/MechanicCard.jsx</title>
+    <title>Code coverage report for src/components/RepairGuide.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/components</a> MechanicCard.jsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/components</a> RepairGuide.jsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">13.63% </span>
+                <span class="strong">17.85% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/66</span>
+                <span class='fraction'>10/56</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">13.63% </span>
+                <span class="strong">17.85% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/66</span>
+                <span class='fraction'>10/56</span>
             </div>
         
             
@@ -119,19 +119,7 @@
 <a name='L54'></a><a href='#L54'>54</a>
 <a name='L55'></a><a href='#L55'>55</a>
 <a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a>
-<a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L57'></a><a href='#L57'>57</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -179,91 +167,70 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import { useState } from 'react';
-import "@fortawesome/fontawesome-free/css/all.css";
-import { haversineDistance } from '../utilities/coordinates';
-import "./MechanicCard.css";
+import guideData from '../data/repair.json'; 
+import './RepairGuide.css'
+import icon from ".././icons/carRepair.png";
 &nbsp;
-  const MechanicCard = <span class="fstat-no" title="function not covered" >({name, quote, rating, lat, lon}) =&gt; {</span>
+const RepairGuide = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    const dtcEntries = guideData['Repair Guide']['DTC'];</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    const currentLat = 42.057838</span>
-<span class="cstat-no" title="statement not covered" >    const currentLong = -87.676140</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    const distance = haversineDistance(currentLat, currentLong, lat, lon)</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    const [quoteReceived, setQuoteReceived] = useState()</span>
-<span class="cstat-no" title="statement not covered" >    const [viewQuote, setViewQuote] = useState()</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    const quoteRequested = () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      setTimeout(function () {</span>
-<span class="cstat-no" title="statement not covered" >        console.log("timeout")</span>
-<span class="cstat-no" title="statement not covered" >      }, 10000)</span>
-<span class="cstat-no" title="statement not covered" >      setQuoteReceived(true)</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    const viewQuoteClicked = () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      setViewQuote(true)</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    const closePopup = () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      setViewQuote(false)</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
 <span class="cstat-no" title="statement not covered" >    return (</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className="card" style={{ width: '90%' }}&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;div className="card-body"&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;div className="card-title"&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;div&gt;</span>
-<span class="cstat-no" title="statement not covered" >              {name}</span>
-<span class="cstat-no" title="statement not covered" >            &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;div&gt;</span>
-<span class="cstat-no" title="statement not covered" >              {rating}/5.0 &lt;i className="fa-solid fa-star" /&gt; </span>
-<span class="cstat-no" title="statement not covered" >              &lt;br/&gt;</span>
-<span class="cstat-no" title="statement not covered" >              {distance.toFixed(2)} mi away</span>
-<span class="cstat-no" title="statement not covered" >            &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;div style={{justifyContent: "center", alignContent: "center"}}&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;button type="button" className="btn btn-primary" onClick={quoteRequested}&gt;Request Quote&lt;/button&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;br/&gt;</span>
-<span class="cstat-no" title="statement not covered" >            {quoteReceived ? &lt;button type="button" className="btn btn-primary" onClick={viewQuoteClicked}&gt;View Quote&lt;/button&gt; : &lt;button type="button" className="btn btn-primary" disabled&gt;View Quote&lt;/button&gt;}</span>
-<span class="cstat-no" title="statement not covered" >          &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div&gt;</span>
-<span class="cstat-no" title="statement not covered" >        {viewQuote &amp;&amp; (</span>
-<span class="cstat-no" title="statement not covered" >                &lt;div className="quote-popup"&gt;</span>
-<span class="cstat-no" title="statement not covered" >                    &lt;div className="quote-popup-content"&gt;</span>
-<span class="cstat-no" title="statement not covered" >                        &lt;span className="close-popup" onClick={closePopup}&gt;&amp;times;&lt;/span&gt;</span>
-<span class="cstat-no" title="statement not covered" >                        &lt;iframe src={quote} style={{ height: '100%' }}/&gt;</span>
+<span class="cstat-no" title="statement not covered" >        &lt;div className='container'&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;a href="/navpage" className="link"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                &lt;img src={icon} alt="Repair Icon" className="logo" /&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;/a&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;h1&gt;Repair Guide&lt;/h1&gt;</span>
+<span class="cstat-no" title="statement not covered" >            {Object.entries(dtcEntries).map(([dtcCode, dtcData]) =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >                &lt;div key={dtcCode}&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    &lt;h2&gt;DTC: {dtcCode}&lt;/h2&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    &lt;p&gt;Description: {dtcData['DTC Explanation']}&lt;/p&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    &lt;p&gt;Part: {dtcData['Part']}&lt;/p&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    &lt;p&gt;Possible Causes: {dtcData['Possible Causes']}&lt;/p&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    &lt;div&gt;</span>
+<span class="cstat-no" title="statement not covered" >                        {dtcData['image_url'].map((url, index) =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;img </span>
+<span class="cstat-no" title="statement not covered" >                                key={index} </span>
+<span class="cstat-no" title="statement not covered" >                                src={url} </span>
+<span class="cstat-no" title="statement not covered" >                                alt={`${dtcCode} Image ${index + 1}`}</span>
+<span class="cstat-no" title="statement not covered" >                                style={{ maxWidth: '100%', height: 'auto' }} </span>
+<span class="cstat-no" title="statement not covered" >                            /&gt;</span>
+<span class="cstat-no" title="statement not covered" >                        ))}</span>
 <span class="cstat-no" title="statement not covered" >                    &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    {dtcData['youtube_link'] &amp;&amp; (</span>
+<span class="cstat-no" title="statement not covered" >                        &lt;div className="video-responsive"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                            &lt;iframe</span>
+<span class="cstat-no" title="statement not covered" >                                title={`YouTube Video ${dtcCode}`}</span>
+<span class="cstat-no" title="statement not covered" >                                src={`https://www.youtube.com/embed/${getYoutubeVideoID(dtcData['youtube_link'])}`}</span>
+<span class="cstat-no" title="statement not covered" >                                frameBorder="0"</span>
+<span class="cstat-no" title="statement not covered" >                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"</span>
+<span class="cstat-no" title="statement not covered" >                                allowFullScreen</span>
+<span class="cstat-no" title="statement not covered" >                            &gt;&lt;/iframe&gt;</span>
+<span class="cstat-no" title="statement not covered" >                        &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    )}</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >                &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >            )}</span>
+<span class="cstat-no" title="statement not covered" >            ))}</span>
 <span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >  );</span>
+<span class="cstat-no" title="statement not covered" >    );</span>
 <span class="cstat-no" title="statement not covered" >};</span>
 &nbsp;
-export default MechanicCard;
+const getYoutubeVideoID = <span class="fstat-no" title="function not covered" >(url) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&amp;v=)([^#\&amp;\?]*).*/;</span>
+<span class="cstat-no" title="statement not covered" >    const match = url.match(regExp);</span>
+<span class="cstat-no" title="statement not covered" >    return (match &amp;&amp; match[2].length === 11) ? match[2] : null;</span>
+<span class="cstat-no" title="statement not covered" >};</span>
 &nbsp;
+export default RepairGuide;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

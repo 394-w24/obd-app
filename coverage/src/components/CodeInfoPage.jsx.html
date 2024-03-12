@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">30.76% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/26</span>
+                <span class='fraction'>27/27</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">50% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">30.76% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/26</span>
+                <span class='fraction'>27/27</span>
             </div>
         
             
@@ -57,11 +57,11 @@
         <template id="filterTemplate">
             <div class="quiet">
                 Filter:
-                <input oninput="onInput()" type="search" id="fileSearch">
+                <input type="search" id="fileSearch">
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -89,30 +89,32 @@
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
@@ -120,25 +122,26 @@ import { useLocation } from 'react-router-dom';
 import Response from './response';
 import icon from ".././icons/carRepair.png";
 &nbsp;
-const CodeInfoPage = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  const location = useLocation();</span>
-<span class="cstat-no" title="statement not covered" >  const formData = location.state || {};</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
-<span class="cstat-no" title="statement not covered" >    &lt;div className="container"&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className="inner"&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;a href="/" className="link"&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;img src={icon} alt="Repair Icon" className="logo" /&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;/a&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;h1 className="title"&gt;Code Information&lt;/h1&gt;</span>
-<span class="cstat-no" title="statement not covered" >      {formData.vin &amp;&amp; &lt;p&gt;VIN: {formData.vin}&lt;/p&gt;}</span>
-<span class="cstat-no" title="statement not covered" >      {formData.miles &amp;&amp; &lt;p&gt;Mileage: {formData.miles}&lt;/p&gt;}</span>
-<span class="cstat-no" title="statement not covered" >      {formData.code &amp;&amp; &lt;p&gt;Code: {formData.code}&lt;/p&gt;}</span>
-<span class="cstat-no" title="statement not covered" >      &lt;Response /&gt;</span>
-<span class="cstat-no" title="statement not covered" >    &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >  );</span>
-<span class="cstat-no" title="statement not covered" >};</span>
+const CodeInfoPage = () =&gt; {
+  const location = useLocation();
+  const formData = location.<span class="branch-0 cbranch-no" title="branch not covered" >state || {};</span>
+&nbsp;
+  return (
+    &lt;div className="container"&gt;
+      &lt;div&gt;
+          &lt;a href="/navpage" className="link"&gt;
+              &lt;img src={icon} alt="Repair Icon" className="logo"/&gt;
+              &lt;span className="title"&gt;RepairMate&lt;/span&gt;
+          &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;h1&gt;Code Information&lt;/h1&gt;
+      {formData.vin &amp;&amp; &lt;p&gt;VIN: {formData.vin}&lt;/p&gt;}
+      {formData.miles &amp;&amp; &lt;p&gt;Mileage: {formData.miles}&lt;/p&gt;}
+      {/* {formData.code &amp;&amp; &lt;p&gt;Code: {formData.code}&lt;/p&gt;} */}
+      &lt;Response /&gt;
+    &lt;/div&gt;
+  );
+};
 &nbsp;
 export default CodeInfoPage;
 &nbsp;</pre></td></tr></table></pre>
@@ -148,7 +151,7 @@ export default CodeInfoPage;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-02-26T22:46:19.111Z
+                at 2024-03-12T23:53:41.018Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
