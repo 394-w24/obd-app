@@ -18,7 +18,6 @@ const CodeInfoPage = () => {
       <h1>Code Information</h1>
       {formData.vin && <p>VIN: {formData.vin}</p>}
       {formData.miles && <p>Mileage: {formData.miles}</p>}
-      {/* {formData.code && <p>Code: {formData.code}</p>} */}
       <Response />
     </div>
   );

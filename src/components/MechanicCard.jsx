@@ -28,6 +28,7 @@ import "./MechanicCard.css";
     const closePopup = () => {
       setViewQuote(false)
     }
+    
     return (
       <div>
       <div className="card" style={{ width: '90%' }}>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import MechanicCard from './MechanicCard';
 import icon from ".././icons/carRepair.png";
 import { useDbData } from '../utilities/firebase';

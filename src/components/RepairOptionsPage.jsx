@@ -18,7 +18,6 @@ const RepairOptionsPage = () => {
   const dtcEntries = guideData['Repair Guide']['DTC'];
   const dtcData = dtcEntries["P0150"];
   const videoId = getYoutubeVideoID(dtcData['youtube_link']);
-  const [isVideoOpen, setVideoOpen] = useState(false);
   const [isPartsModalOpen, setPartsModalOpen] = useState(false); // New state for the parts modal
 
   const [isImageModalOpen, setImageModalOpen] = useState(false);
