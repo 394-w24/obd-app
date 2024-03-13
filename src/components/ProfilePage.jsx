@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import profile from ".././icons/user.png"
 import "./ProfilePage.css"
 import { useAuthState } from '.././utilities/firebase';

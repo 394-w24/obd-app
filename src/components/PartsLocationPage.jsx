@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import profile from ".././icons/user.png"
 import './PartsLocationPage.css'
 import icon from ".././icons/carRepair.png";
 import guideData from '../data/repair.json'; 
@@ -9,6 +7,7 @@ import guideData from '../data/repair.json';
 const PartsLocationPage = () => {
     const dtcEntries = guideData['Repair Guide']['DTC'];
     const dtcData = dtcEntries["P0150"]
+    
   return (
     <div className='container'>
         <a href="/navpage" className="link">

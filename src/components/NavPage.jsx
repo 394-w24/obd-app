@@ -1,10 +1,6 @@
 import React from 'react';
 import "./NavPage.css"
 import { Link, useNavigate } from 'react-router-dom';
-import profile from ".././icons/user.png"
-import repair from ".././icons/carRepair.png"
-import settings from ".././icons/settings.png"
-import contact from ".././icons/contact.png"
 import { useAuthState, signOut } from '.././utilities/firebase';
 
 
