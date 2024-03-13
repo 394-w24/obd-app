@@ -1,8 +1,11 @@
+<!-- PROJECT SHIELDS -->
+<!--
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/394-w24/obd-app">
-    <img src={LoginLogo} alt="LoginLogo" width="80" height="80"/>
+    <img src=readme-images/LoginLogo.png alt=LoginLogo width="150" height="80"/>
   </a>
 
   <h3 align="center">RepairMate</h3>
@@ -20,13 +23,23 @@
 ## About The Project
 <!-- screenshot -->
 
+![product-screenshot]
 
+RepairMate allows users to diagnose repairs their car needs. Once a car owner sees a repair light come on, they can use RepairMate in tandem with an On-Board Diagnostics (OBD) device to get more information about their repair. In the product screenshot above, the user would input their car's VIN number, mileage, and the DTC code given by the OBD device they used on their car. From there, RepairMate tells the user what the most likely problem is and gives possible next steps. 
 
-### Built With
+After diagnosing a repair, RepairMate aims to give its users: 
+* The location of the necessary repair in the car 
+* A step-by-step repair guide to aid the car owners should they choose to repair the problem themselves 
+* A video which also walks through how to complete the repair 
+* A marketplace to buy the parts needed in the repair (Not yet completed, part of the roadmap)
+* A way to request quotes from local mechanics for the given repair (Not completely done, but the concept is mocked in RepairMate's current version)
+
+## Built With
 
 * [![React][React.js]][React-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 <!-- GETTING STARTED -->
@@ -64,6 +77,8 @@
         };
    ```
 
+### Firebase
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -80,27 +95,44 @@
 <!-- ROADMAP -->
 ## Roadmap
 
+- [ ] Add user profile page 
+    - [ ] User can see history of repair guide they have accessed 
+    - [ ] User can store different cars under their profile 
+- [ ] Have realtime database with more local mechanics 
+- [ ] Add a real mechanism for contacting mechanics for a wuote when "Request Quote" button on <MechanicPage /> is clicked
+- [ ] Incorporate a car parts market place in the greyed out "Buy Parts" button on the <RepairOptionsPage />
+    - [ ] User can see necessary car parts for the repair from multiple stores and compare prices 
+- [ ] Add "Maintenance" sections of RepairMate under greyed out "Maintenance" button on the <NavPage />
+    - This is very similar to the Repair user flow, but maintenance issue would be preset like "Change windshield wipers" and then have maintenane options similar to the repair options
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- CONTACT -->
+## Contact
 
-<!-- CONTRIBUTING -->
-## Contributing
-
-
+Project Link: [https://github.com/394-w24/obd-app](https://github.com/394-w24/obd-app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-## License
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
 
-This project is licensed under the terms of the [MIT license](./LICENSE).
+Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+
+* [Font Awesome](https://fontawesome.com)
+* [React Icons](https://react-icons.github.io/react-icons/search)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+[product-screenshot]: readme-images/requestPage.png
+[login-logo]: readme-images/LoginLogo.png
