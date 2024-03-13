@@ -77,7 +77,21 @@ After diagnosing a repair, RepairMate aims to give its users:
         };
    ```
 
-### Firebase
+### Firebase Initialization
+In addition to add the config information `firebase.js`, you'll also need to start with some data in your firebase Realtime Database and Storage 
+
+#### Realtime Database 
+After setting up your Firebase project, you should create a Realtime Database to hook up to the project and import the starter data. 
+1. Create Realtime Database
+2. Create `Mechanics` endpoint 
+2. Under the `Mechanics` endpoint, import the `firebase-realtime-starter.json` to the database. The file is available in the repo. 
+
+Your structure should look something like the photo below
+![firebase-realtime]
+
+#### Firebase Storage 
+After creating a Firebase Storage instance, you should upload all of the files in the `firebase-storage-starter/` folder. You can find the folder in the repo. After uploading the files, your starting storage should look like the image below 
+![firebase-storage]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,7 +99,8 @@ After diagnosing a repair, RepairMate aims to give its users:
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
+* The mechanics page calculates the users location from mechanics in the database. Currently, this location is hardcoded as Northwestern University's Technological Institude longitude and latitude in `MechanicCard.jsx`. This should be changed to reflect the desired location or the user's current location 
+* Currently, the app only supports the p0150 DTC code as input. All information that populates in the repair guide is specific to this code. To expand usage, multiple DTC codes should be transferred to a firebase Realtime Database and data should be read from there. 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -136,3 +151,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [React-url]: https://reactjs.org/
 [product-screenshot]: readme-images/requestPage.png
 [login-logo]: readme-images/LoginLogo.png
+[firebase-realtime]: readme-images/firebaseRealtime.png
+[firebase-storage]: readme-images/firebaseStorage.png

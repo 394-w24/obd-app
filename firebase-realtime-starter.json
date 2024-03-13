@@ -1,0 +1,30 @@
+{
+  "01": {
+    "Latitude": 42.03935,
+    "Longitude": -87.67994,
+    "Name": "Warren's Auto Service ",
+    "Quote": "https://firebasestorage.googleapis.com/v0/b/obd-app-acded.appspot.com/o/WarrenRepairMateRFQ.pdf?alt=media&token=2a7660e9-3f27-4615-9675-f6d2a68e6e02",
+    "Rating": 4.8
+  },
+  "02": {
+    "Latitude": 42.0649,
+    "Longitude": -87.69958,
+    "Name": "HEART Certified Auto Care",
+    "Quote": "https://firebasestorage.googleapis.com/v0/b/obd-app-acded.appspot.com/o/HeartRepairMateRFQ.pdf?alt=media&token=2b19de99-6fad-43cb-a628-494a5ee71277",
+    "Rating": 4.8
+  },
+  "03": {
+    "Latitude": 42.05376,
+    "Longitude": -87.68986,
+    "Name": "Meineke Car Care Center",
+    "Quote": "https://firebasestorage.googleapis.com/v0/b/obd-app-acded.appspot.com/o/MeinekeRepairMateRFQ.pdf?alt=media&token=4f719a8e-7d24-4632-a101-0aa227e76cf7",
+    "Rating": 3.9
+  },
+  "04": {
+    "Latitude": 42.04174,
+    "Longitude": -87.70031,
+    "Name": "A1 Auto Care",
+    "Quote": "https://firebasestorage.googleapis.com/v0/b/obd-app-acded.appspot.com/o/A1AutoRepairMateRFQ.pdf?alt=media&token=a3db6766-ea36-43b5-ac5d-3a18f91de7fd",
+    "Rating": 4.3
+  }
+}
