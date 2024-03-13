@@ -37,6 +37,8 @@ After diagnosing a repair, RepairMate aims to give its users:
 ## Built With
 
 * [![React][React.js]][React-url]
+* ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34)
+* ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
