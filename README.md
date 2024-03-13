@@ -1,85 +1,106 @@
-# React Vitest Template
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/394-w24/obd-app">
+    <img src={LoginLogo} alt="LoginLogo" width="80" height="80"/>
+  </a>
 
-A starter template for building React apps with Vite. Includes Vitest for unit testing and
-a hefty .gitignore file.
+  <h3 align="center">RepairMate</h3>
 
+  <p align="center">
+    RepairMate helps car owners diagnose and repair car problems!
+    <br />
+    <a href="https://github.com/394-w24/obd-app"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="repairmate-dev-c33ee.web.app/">View Demo</a>
+  </p>
+</div>
+
+## About The Project
+<!-- screenshot -->
+
+
+
+### Built With
+
+* [![React][React.js]][React-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+### Prerequisites
+
+
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/394-w24/obd-app
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Set up your firebase  and enter your firebase config in `firebase.js`
+   ```js
+    const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_PROJECT_ID.appspot.com",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID",
+        measurementId: "YOUR_MEASUREMENT_ID"
+        };
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
 ## Usage
 
-```
-mkdir your-app-name
-cd your-app-name
-npx degit criesbeck/react-vitest
-npm install
-```
-
-## Test
-
-Verify that the initial app works. Run
-
-```
-npm start
-```
-
-and open the URL displayed.
-
-Verify that the unit tests work with
-
-```
-npm test
-```
-
-Two tests should run and pass. 
-
-## Scripts
-
-**package.json** defines the following scripts:
-
-| Script         | Description                                         |
-| -------------- | --------------------------------------------------- |
-| npm start      | Runs the app in the development mode.               |
-| npm run dev    | Runs the app in the development mode.               |
-| npm run build  | Builds the app for production to the `dist` folder. |
-| npm run serve  | Serves the production build from the `dist` folder. |
-| npm test       | Starts a Jest-like test loop                        |
 
 
-## Git
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-If everything is working, set up [your local and remote repositories](https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-locally-hosted-code-to-github#adding-a-local-repository-to-github-using-git).
 
-## Folder Structure
 
-```
-your-app-name
-├── node_modules
-├── public
-│   ├── favicon.svg
-│   └── robots.txt
-└── src
-    ├── App.css
-    ├── App.jsx
-    ├── index.css
-    ├── index.jsx
-    └── logo.svg
-├── .gitignore
-├── index.html
-├── package.json
-├── README.md
-├── vite.config.js
-```
+<!-- ROADMAP -->
+## Roadmap
 
-## Credits
 
-React-Vitest built and maintained by [Chris Riesbeck](https://github.com/criesbeck).
 
-Inspired by [SafdarJamal/vite-template-react](https://github.com/SafdarJamal/vite-template-react).
-Expanded to include Vitest and some sample tests.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Thanks to Rich Harris for [degit](https://www.npmjs.com/package/degit).
 
-Gitignore file created with [the Toptal tool](https://www.toptal.com/developers/gitignore/api/react,firebase,visualstudiocode,macos,windows).
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 ## License
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
